@@ -26,70 +26,65 @@ const SignIn = (props) => {
   const { handleSubmit, submitting, history } = props;
 
   const onSubmit = (props) => {
-    setError(true);
-    history.push("/home");
+    history.push("/dashboard/" + props.role);
   };
 
   return (
-    <div className="login-container">
-      <Grid.Column
-        style={{
-          width: "300px",
-          textAlign: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Header as="h2">Sign in </Header>
-        <label>Securely login to your DocBook </label>
-        <Segment>
-          <Form size="large" onSubmit={handleSubmit(onSubmit)}>
-            <Field
-              fluid
-              name="email"
-              component={LabelInputField}
-              label={{
-                content: <Icon color="blue" name="mail" />,
-              }}
-              labelPosition="left"
-              placeholder="Email"
-            />
-
-            <Link to="/forgotpass" className="forgot-password">
-              Forgot password?
-            </Link>
-            <Field
-              fluid
-              name="password"
-              component={LabelInputField}
-              type="password"
-              label={{
-                content: <Icon color="blue" name="lock" />,
-              }}
-              labelPosition="left"
-              placeholder="Password"
-            />
-            <Form.Group>
+    <div>
+      <Grid padded stacked centered>
+        <Grid.Column mobile={16} tablet={8} computer={5}>
+          <Header as="h2">Sign in </Header>
+          <label>Securely login to your account </label>
+          <Segment>
+            <Form size="large" onSubmit={handleSubmit(onSubmit)}>
               <Field
-                name="remember"
-                component={CheckboxField}
-                label="Stay sign in"
+                fluid
+                name="email"
+                component={LabelInputField}
+                label={{
+                  content: <Icon color="blue" name="mail" />,
+                }}
+                labelPosition="left"
+                placeholder="Email"
               />
-            </Form.Group>
-            <Button color="gray" submitting={submitting} fluid size="large">
-              Login
-            </Button>
-          </Form>
-        </Segment>
-        {error ? (
-          <Message>
-            Forgot Password?<Link to="/signup">Sign Up</Link>
-          </Message>
-        ) : (
-          <Message>
-            Not registered yet?<Link to="/signup">Sign Up</Link>
-          </Message>
-        )}
-      </Grid.Column>
+
+              <Link to="/forgotpass" style={{ float: "right" }}>
+                Forgot password?
+              </Link>
+              <Field
+                fluid
+                name="password"
+                component={LabelInputField}
+                type="password"
+                label={{
+                  content: <Icon color="blue" name="lock" />,
+                }}
+                labelPosition="left"
+                placeholder="Password"
+              />
+              <Form.Group>
+                <Field
+                  name="remember"
+                  component={CheckboxField}
+                  label="Stay sign in"
+                />
+              </Form.Group>
+              <Button color="gray" submitting={submitting} fluid size="large">
+                Login
+              </Button>
+            </Form>
+          </Segment>
+          {error ? (
+            <Message>
+              Forgot Password?<Link to="/signup">Sign Up</Link>
+            </Message>
+          ) : (
+            <Message>
+              Not registered yet?<Link to="/signup">Sign Up</Link>
+            </Message>
+          )}
+        </Grid.Column>
+      </Grid>
     </div>
   );
 };

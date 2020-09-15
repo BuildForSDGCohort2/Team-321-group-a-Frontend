@@ -18,35 +18,31 @@ const ForgotPassword = (props) => {
   };
 
   return (
-    <div className="login-container">
-      <Grid.Column
-        style={{
-          width: "300px",
-          textAlign: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Segment style={{ marginTop: "100px" }}>
-          <Header className="forgotpass" as="h2">
-            Forgot Password?
-          </Header>
-          <Form size="large" onSubmit={handleSubmit(onSubmit)}>
-            <Field
-              fluid
-              name="email"
-              component={LabelInputField}
-              label={{
-                content: <Icon color="blue" name="mail" />,
-              }}
-              labelPosition="left"
-              placeholder="Enter Email Here"
-            />
-            <Button color="gray" submitting={submitting} fluid size="large">
-              Recover Password
-            </Button>
-          </Form>
-        </Segment>
-      </Grid.Column>
+    <div>
+      <Grid padded stacked centered>
+        <Grid.Column mobile={16} tablet={8} computer={5}>
+          <Segment style={{ marginTop: "100px" }}>
+            <Header as="h2">
+              Forgot Password?
+            </Header>
+            <Form size="large" onSubmit={handleSubmit(onSubmit)}>
+              <Field
+                fluid
+                name="email"
+                component={LabelInputField}
+                label={{
+                  content: <Icon color="blue" name="mail" />,
+                }}
+                labelPosition="left"
+                placeholder="Enter Email Here"
+              />
+              <Button color="gray" submitting={submitting} fluid size="large">
+                Recover Password
+              </Button>
+            </Form>
+          </Segment>
+        </Grid.Column>
+      </Grid>
     </div>
   );
 };

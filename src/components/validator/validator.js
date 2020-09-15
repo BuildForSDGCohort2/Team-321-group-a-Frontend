@@ -27,8 +27,8 @@ export const validate = values => {
       errors.password = 'Password must not be less than 5'
     }
 
-    if(!values.hasAgreed){
-      errors.hasAgreed = 'Required'
+    if(!values.role){
+      errors.role = 'Required'
     }
   
     return errors
