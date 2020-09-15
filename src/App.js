@@ -7,9 +7,7 @@ import SignUp from './pages/sign-up/sign-up.page';
 import SignIn from './pages/sign-in/sign-in.page';
 import Footer from "./components/footer/footer.component";
 
-//from dashboard
 import Dashboard from "./dashboard/pages/dashboard.page";
-
 
 export default function App() {
 
