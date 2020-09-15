@@ -6,21 +6,22 @@ import { SidebarData } from "./SidebarData";
 import "./Sidebar.css";
 import { IconContext } from "react-icons";
 import { Icon } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 
-function Navbar() {
+function Navbar({userRole: {role}}) {
   const [sidebar, setSidebar] = useState(false);
+  const showSidebar = () => setSidebar(!sidebar);
 
-  const showSidebar = ({match:{path}}) => setSidebar(!sidebar);
-  const userRole = "hospital";
 
   function renderSidebar() {
-    if (userRole === "specialist") {
+    if (role === "specialist") {
       return SidebarData.specialist;
-    } else if (userRole === "hospital") {
+    } else if (role === "hospital") {
       return SidebarData.hospital;
-    } else if (userRole === "patient") {
+    } else if (role === "patient") {
       return SidebarData.patient;
     }
+    return SidebarData.patient
   }
 
   return (
@@ -57,4 +58,8 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+const mapStateToProps = ({user: {currentUser}}) => ({
+  userRole: currentUser
+});
+
+export default connect(mapStateToProps)(Navbar);

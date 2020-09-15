@@ -26,9 +26,7 @@ const SignIn = (props) => {
   const { handleSubmit, submitting, history } = props;
 
   const onSubmit = (props) => {
-    setError(true);
-    console.log(props);
-    // history.push("/dashboard/"props.role);
+    history.push("/dashboard/" + props.role);
   };
 
   return (
