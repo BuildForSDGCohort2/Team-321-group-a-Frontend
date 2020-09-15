@@ -1,13 +1,13 @@
-import React from 'react'
-import Navbar from '../../sidebar/Navbar';
+import React from "react";
+import Sidebar from "../../sidebar/Sidebar";
 
 function PatientPage() {
-    return (
-        <div>
-                <Navbar />
-            patient ...
-        </div>
-    )
+  return (
+    <div>
+      <Sidebar />
+      patient ...
+    </div>
+  );
 }
 
 export default PatientPage;

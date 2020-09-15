@@ -28,14 +28,9 @@ const SignUp = (props) => {
   };
 
   return (
-    <div className="login-container">
-      <Grid.Column
-        style={{
-          width: "300px",
-          textAlign: "center",
-          justifyContent: "center",
-        }}
-      >
+    <div>
+        <Grid padded stacked centered>
+        <Grid.Column mobile={16} tablet={8} computer={5}>
         <Header as="h2">Create a Secure Account</Header>
         <label>Welcome to the future of Wealth & Health </label>
         <Segment>
@@ -98,6 +93,7 @@ const SignUp = (props) => {
           Already registered?<Link to="/">Sign In</Link>
         </Message>
       </Grid.Column>
+      </Grid>
     </div>
   );
 };

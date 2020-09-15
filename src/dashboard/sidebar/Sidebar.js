@@ -3,22 +3,22 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
-import "./Navbar.css";
+import "./Sidebar.css";
 import { IconContext } from "react-icons";
 import { Icon } from 'semantic-ui-react';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
 
-  const showSidebar = () => setSidebar(!sidebar);
-  const user = "hospital";
+  const showSidebar = ({match:{path}}) => setSidebar(!sidebar);
+  const userRole = "hospital";
 
   function renderSidebar() {
-    if (user === "specialist") {
+    if (userRole === "specialist") {
       return SidebarData.specialist;
-    } else if (user === "hospital") {
+    } else if (userRole === "hospital") {
       return SidebarData.hospital;
-    } else if (user === "patient") {
+    } else if (userRole === "patient") {
       return SidebarData.patient;
     }
   }
