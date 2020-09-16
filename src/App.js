@@ -13,6 +13,7 @@ import HospitalPage from "./dashboard/pages/hospital/hospital.page";
 import SpecialistPage from "./dashboard/pages/specialist/specialist.page";
 import HospitalSpecialistPage from "./dashboard/pages/hospital/hospital-specialist.page";
 
+
 export default function App() {
 
   return (
@@ -29,4 +30,6 @@ export default function App() {
         <Route exact path="/" component={SignIn} />
       </Switch>
     </div>
+
   )};
+
