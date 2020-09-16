@@ -9,6 +9,7 @@ import Footer from "./components/footer/footer.component";
 
 import Dashboard from "./dashboard/pages/dashboard.page";
 
+
 export default function App() {
 
   return (
@@ -21,4 +22,6 @@ export default function App() {
         <Route exact path="/" component={SignIn} />
       </Switch>
     </div>
+
   )};
+
