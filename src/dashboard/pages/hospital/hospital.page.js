@@ -5,7 +5,7 @@ function HospitalPage() {
   return (
     <div>
       <Sidebar />
-      hosptial ...
+
     </div>
   );
 }

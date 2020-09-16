@@ -30,7 +30,7 @@ const SignUp = (props) => {
 
   const onSubmit = (props) => {
     signUpSuccess(props);
-    history.push("/dashboard/" + props.role);
+    history.push(props.role);
   };
 
   const userRole = [

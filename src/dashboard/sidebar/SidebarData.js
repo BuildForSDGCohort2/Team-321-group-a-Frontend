@@ -8,31 +8,31 @@ export const SidebarData = {
   specialist: 
   [{
       title: 'Home',
-      path: '/',
+      path: '/specialist',
       icon: <AiIcons.AiFillHome />,
       cName: 'nav-text'
     },
     {
       title: 'Reports',
-      path: '/reports',
+      path: '/specialist/reports',
       icon: <IoIcons.IoIosPaper />,
       cName: 'nav-text'
     },
     {
         title: 'Patients',
-        path: '/patients',
+        path: '/specialist/patients',
         icon: <IoIcons.IoIosPaper />,
         cName: 'nav-text'
       },
     {
       title: 'Messages',
-      path: '/messages',
+      path: '/specialist/messages',
       icon: <FaIcons.FaEnvelopeOpenText />,
       cName: 'nav-text'
     },
     {
       title: 'Support',
-      path: '/support',
+      path: '/specialist/support',
       icon: <IoIcons.IoMdHelpCircle />,
       cName: 'nav-text'
     }
@@ -41,25 +41,25 @@ export const SidebarData = {
   hospital: [
     {
       title: 'Home',
-      path: '/',
+      path: '/hospital',
       icon: <AiIcons.AiFillHome />,
       cName: 'nav-text'
     },
     {
       title: 'Specialists',
-      path: '/specialists',
+      path: '/hospital/specialists',
       icon: <FaIcons.FaCartPlus />,
       cName: 'nav-text'
     },
     {
       title: 'Messages',
-      path: '/messages',
+      path: '/hospital/messages',
       icon: <FaIcons.FaEnvelopeOpenText />,
       cName: 'nav-text'
     },
     {
       title: 'Support',
-      path: '/support',
+      path: '/hospital/support',
       icon: <IoIcons.IoMdHelpCircle />,
       cName: 'nav-text'
     }
@@ -68,25 +68,31 @@ export const SidebarData = {
   patient: [
     {
       title: 'Home',
-      path: '/',
+      path: '/patient',
       icon: <AiIcons.AiFillHome />,
       cName: 'nav-text'
     },
     {
       title: 'Hospitals',
-      path: '/hospitals',
-      icon: <FaIcons.FaCartPlus />,
+      path: '/patient/hospitals',
+      icon: <FaIcons.FaHospitalAlt />,
+      cName: 'nav-text'
+    },
+    {
+      title: 'Appointment',
+      path: '/patient/appointment',
+      icon: <AiIcons.AiOutlineWhatsApp />,
       cName: 'nav-text'
     },
     {
       title: 'Messages',
-      path: '/messages',
+      path: '/patient/messages',
       icon: <FaIcons.FaEnvelopeOpenText />,
       cName: 'nav-text'
     },
     {
       title: 'Support',
-      path: '/support',
+      path: '/patient/support',
       icon: <IoIcons.IoMdHelpCircle />,
       cName: 'nav-text'
     }

@@ -8,7 +8,7 @@ import SpecialistPage from "./specialist/specialist.page";
 const DashboardComponent = ({match}) => {
   return (
     <div>
-       <Route
+       {/* <Route
         path={`${match.path}/specialist`}
         component={SpecialistPage}
       />
@@ -19,7 +19,7 @@ const DashboardComponent = ({match}) => {
        <Route
         path={`${match.path}/patient`}
         component={PatientPage}
-      />
+      /> */}
 
 
     </div>
