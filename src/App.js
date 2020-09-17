@@ -12,6 +12,7 @@ import Patient from './dashboard/pages/patient/patient.pages';
 import HospitalPage from "./dashboard/pages/hospital/hospital.page";
 import SpecialistPage from "./dashboard/pages/specialist/specialist.page";
 import HospitalSpecialistPage from "./dashboard/pages/hospital/hospital-specialist.page";
+import paymentPage from "./dashboard/pages/patient/payment/payment.page";
 
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
     <div>
       <Switch>
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/pay" component={paymentPage} />
         <Route path="/hospital/specialists" component={HospitalSpecialistPage} />
         <Route path="/patient" component={Patient} />
         <Route path="/hospital" component={HospitalPage} />

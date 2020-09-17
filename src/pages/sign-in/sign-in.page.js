@@ -18,8 +18,6 @@ import { validate } from "../../components/validator/validator";
 
 import { Link } from "react-router-dom";
 
-import "../../styles/input.styles.scss";
-
 const SignIn = (props) => {
   const [error, setError] = useState(null);
 
