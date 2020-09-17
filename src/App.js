@@ -26,10 +26,10 @@ export default function App() {
         <Route path="/patient" component={Patient} />
         <Route path="/hospital" component={HospitalPage} />
         <Route path="/specialist" component={SpecialistPage} />
-        <Route  path="/home" component={HomePage} />
-        <Route  path="/forgotpass" component={forgotPasswordPage} />
-        <Route  path="/signup" component={SignUp} />
-        <Route exact path="/" component={SignIn} />
+        <Route exact path="/" component={HomePage} />
+        <Route path="/forgotpass" component={forgotPasswordPage} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/signin" component={SignIn} />
       </Switch>
     </div>
 
