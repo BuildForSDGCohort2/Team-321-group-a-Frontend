@@ -15,6 +15,7 @@
   cursor: pointer;
   text-decoration: none;
   color: #6b6291;
+  font-weight: bold;
 }
 
 .nav-btn {
@@ -51,4 +52,19 @@
   .options {
     visibility: hidden;
   }
+}
+
+@media screen and (max-width: 670px) {
+  .logo-option {
+    position: relative;
+    left: 60vw;
+    margin-top: 30px;
+  }
+}
+
+.logo-container {
+  /* box-shadow: 5px 10px #888888; */
+  text-shadow: #6b6291;
+  color: #6b6291;
+  font-weight: bold;
 }

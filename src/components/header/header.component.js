@@ -6,7 +6,7 @@ import headerData from "./header-data";
 import "./header.styles.css";
 import { Button } from "semantic-ui-react";
 
-function Header({ history }) {
+function HeaderComponent({ history }) {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
@@ -17,11 +17,11 @@ function Header({ history }) {
           <FaIcons.FaBars onClick={showSidebar} />
         </Link>
         {/* for landing page desktop view*/}
-        <div className="options">
-          <Link className="logo-container" to="/home">
+        <div className="logo-option">
+          <Link className="logo-container" to="/">
             DocBook
           </Link>
-          <span className="header-right">
+          <span className="header-right options">
             <Link className="option">Companies</Link>
             <Link className="option">Patients</Link>
             <Link className="option">Doctors</Link>
@@ -70,4 +70,4 @@ function Header({ history }) {
   );
 }
 
-export default withRouter(Header);
+export default withRouter(HeaderComponent);
