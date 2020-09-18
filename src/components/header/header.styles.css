@@ -18,15 +18,15 @@
   font-weight: bold;
 }
 
-.nav-btn {
-  box-shadow: 0 0 0 1px #6b6291 inset !important;
-  color: #6b6291 !important;
-  background: transparent !important;
+#nav-btn {
+  box-shadow: 0 0 0 1px #6b6291 inset ;
+  color: #6b6291 ;
+  background: transparent ;
 }
 
-.nav-btn-sec {
-  color: #fff !important;
-  background-color: #6b6291 !important;
+#nav-btn-sec {
+  color: #fff;
+  background-color: #6b6291;
 }
 
 .header {
@@ -63,7 +63,6 @@
 }
 
 .logo-container {
-  /* box-shadow: 5px 10px #888888; */
   text-shadow: #6b6291;
   color: #6b6291;
   font-weight: bold;

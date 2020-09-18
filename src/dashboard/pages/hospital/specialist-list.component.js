@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Button } from "semantic-ui-react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 import ImageContainer from "../../image-container.component";
 import { specialistData } from "../Data";
@@ -29,4 +29,4 @@ export default function SpecialistList() {
       </Grid>
     </div>
   );
-}
+};

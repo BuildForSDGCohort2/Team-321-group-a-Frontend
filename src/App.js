@@ -2,13 +2,13 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import HomePage from "./pages/homepage/homepage.page";
-import forgotPasswordPage from './pages/forgot-password/forgot-password.page';
-import SignUp from './pages/sign-up/sign-up.page';
-import SignIn from './pages/sign-in/sign-in.page';
+import forgotPasswordPage from "./pages/forgot-password/forgot-password.page";
+import SignUp from "./pages/sign-up/sign-up.page";
+import SignIn from "./pages/sign-in/sign-in.page";
 import Footer from "./components/footer/footer.component";
 
 import Dashboard from "./dashboard/pages/dashboard.page";
-import Patient from './dashboard/pages/patient/patient.pages';
+import Patient from "./dashboard/pages/patient/patient.pages";
 import HospitalPage from "./dashboard/pages/hospital/hospital.page";
 import SpecialistPage from "./dashboard/pages/specialist/specialist.page";
 import HospitalSpecialistPage from "./dashboard/pages/hospital/hospital-specialist.page";

@@ -29,7 +29,7 @@ function HeaderComponent({ history }) {
             <Link className="option">Pricing</Link>
             <Button
               size="tiny"
-              className="nav-btn"
+              id="nav-btn"
               attached="left"
               onClick={(e) => history.push("/signin")}
             >
@@ -37,7 +37,7 @@ function HeaderComponent({ history }) {
             </Button>
             <Button
               size="tiny"
-              className="nav-btn-sec"
+              id="nav-btn-sec"
               attached="right"
               onClick={(e) => history.push("/signup")}
             >

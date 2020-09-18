@@ -1,4 +1,4 @@
-import UserActionTypes  from './user.types';
+import UserActionTypes  from "./user.types";
 
 export const SignInStart = () => ({
   type: UserActionTypes.SIGN_IN_START

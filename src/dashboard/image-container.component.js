@@ -1,8 +1,8 @@
 import React from "react";
 import { Card, Rating } from "semantic-ui-react";
 
-const ImageContainer = ({ extra, data: { name, imageUrl, rate, description, profession, available } }) =>{ 
-    const ratings = <Rating icon="star" defaultRating={rate} maxRating={5} disabled />
+const ImageContainer = ({ extra, data: { name, imageUrl, rate, description, profession, available } }) => { 
+    const ratings = <Rating icon="star" defaultRating={rate} maxRating={5} disabled />;
     return (
   <Card
     image={imageUrl}
@@ -12,6 +12,7 @@ const ImageContainer = ({ extra, data: { name, imageUrl, rate, description, prof
     extra={extra}
     centered
   />
-)};
+);
+};
 
 export default ImageContainer;
