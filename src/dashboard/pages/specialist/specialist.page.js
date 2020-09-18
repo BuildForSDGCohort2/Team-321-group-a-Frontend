@@ -1,13 +1,11 @@
-import React from 'react'
-import Navbar from '../../sidebar/Navbar';
+import React from "react";
 
 function SpecialistPage() {
     return (
         <div>
-                <Navbar />
             Specialist ...
         </div>
-    )
+    );
 }
 
 export default SpecialistPage;

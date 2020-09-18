@@ -1,39 +1,12 @@
-.nav-header {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0;
-  background-color: white;
-  /* position: fixed; */
-
-  @media screen and (max-width: 800px) {
-    height: 60px;
-    padding: 5px;
-    margin-bottom: 20px;
-  }
+.header-right {
+  position: relative;
+  left: 46vw;
 }
 
-.logo-container {
-  height: 100%;
-  width: 70px;
-  padding: 25px;
-
-  @media screen and (max-width: 800px) {
-    width: 50px;
-    padding: 0;
-  }
-}
-
-.options {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-
-  @media screen and (max-width: 800px) {
-    width: 90%;
+@media screen and (max-width: 812px) and (min-width: 375px) {
+  .header-right {
+    position: relative;
+    left: 8vw;
   }
 }
 
@@ -41,6 +14,56 @@
   padding: 10px 15px;
   cursor: pointer;
   text-decoration: none;
-  color: black;
-  /* color: white; */
+  color: #6b6291;
+  font-weight: bold;
+}
+
+#nav-btn {
+  box-shadow: 0 0 0 1px #6b6291 inset ;
+  color: #6b6291 ;
+  background: transparent ;
+}
+
+#nav-btn-sec {
+  color: #fff;
+  background-color: #6b6291;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-menu-bars {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background: none;
+}
+
+@media screen and (min-width: 670px) {
+  .header-menu-bars {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .options {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .logo-option {
+    position: relative;
+    left: 60vw;
+    margin-top: 30px;
+  }
+}
+
+.logo-container {
+  text-shadow: #6b6291;
+  color: #6b6291;
+  font-weight: bold;
 }

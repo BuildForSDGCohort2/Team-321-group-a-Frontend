@@ -1,5 +1,5 @@
-import React from 'react';
-import {Form } from 'semantic-ui-react';
+import React from "react";
+import {Form } from "semantic-ui-react";
 
 export const RenderFieldSelect = (field) => (
     <Form.Select
