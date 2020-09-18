@@ -18,8 +18,6 @@ import { validate } from "../../components/validator/validator";
 
 import { Link } from "react-router-dom";
 
-import "../../styles/input.styles.scss";
-
 const SignIn = (props) => {
   const [error, setError] = useState(null);
 
@@ -31,7 +29,7 @@ const SignIn = (props) => {
 
   return (
     <div>
-      <Grid padded stacked centered>
+      <Grid padded stacked="true" centered>
         <Grid.Column mobile={16} tablet={8} computer={5}>
           <Header as="h2">Sign in </Header>
           <label>Securely login to your account </label>
@@ -69,7 +67,7 @@ const SignIn = (props) => {
                   label="Stay sign in"
                 />
               </Form.Group>
-              <Button color="gray" submitting={submitting} fluid size="large">
+              <Button  submitting={submitting} fluid size="large">
                 Login
               </Button>
             </Form>

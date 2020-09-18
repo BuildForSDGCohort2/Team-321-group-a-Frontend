@@ -1,13 +1,11 @@
 import React from "react";
-import Sidebar from "../../sidebar/Sidebar";
 
 function SpecialistPage() {
-  return (
-    <div>
-      <Sidebar />
-      Specialist ...
-    </div>
-  );
+    return (
+        <div>
+            Specialist ...
+        </div>
+    );
 }
 
 export default SpecialistPage;

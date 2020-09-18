@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Field, reduxForm } from "redux-form";
-import { connect } from 'react-redux';
-import { signUpSuccess } from '../../redux/user/user.actions';
+import { connect } from "react-redux";
+import { signUpSuccess } from "../../redux/user/user.actions";
 
 import {
   Form,
@@ -20,9 +20,7 @@ import { validate } from "../../components/validator/validator";
 
 import { Link } from "react-router-dom";
 
-import "../../styles/input.styles.scss";
-
-import { RenderFieldSelect } from '../helper/render-field-select';
+import { RenderFieldSelect } from "../helper/render-field-select";
 
 
 const SignUp = (props) => {
@@ -30,7 +28,7 @@ const SignUp = (props) => {
 
   const onSubmit = (props) => {
     signUpSuccess(props);
-    history.push("/dashboard/" + props.role);
+    history.push(props.role);
   };
 
   const userRole = [

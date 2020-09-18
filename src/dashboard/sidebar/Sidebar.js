@@ -8,19 +8,21 @@ import { IconContext } from "react-icons";
 import { Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
-function Navbar({userRole: {role}}) {
+// function Navbar({userRole: {role}}) {
+function Navbar() {
+
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
 
   function renderSidebar() {
-    if (role === "specialist") {
-      return SidebarData.specialist;
-    } else if (role === "hospital") {
-      return SidebarData.hospital;
-    } else if (role === "patient") {
-      return SidebarData.patient;
-    }
+    // if (role === "specialist") {
+    //   return SidebarData.specialist;
+    // } else if (role === "hospital") {
+    //   return SidebarData.hospital;
+    // } else if (role === "patient") {
+    //   return SidebarData.patient;
+    // }
     return SidebarData.patient
   }
 

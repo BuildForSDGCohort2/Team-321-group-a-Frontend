@@ -1,7 +1,7 @@
-import dashboardActionTypes from './dashboard.types'
+import dashboardActionTypes from "./dashboard.types"
 
 const INITIAL_STATE = {
-    section: 'home'
+    section: "home"
 }
 
 const dashboardReducer = (state = INITIAL_STATE, action) => {
