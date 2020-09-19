@@ -32,7 +32,7 @@ function HospitalList(props) {
                     size="tiny"
                     onClick={(e) => props.history.push("/hospital/specialists")}
                   >
-                    Doctors
+                    Visit
                   </Button>
                 </List.Content>
                 <Image
