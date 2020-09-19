@@ -17,6 +17,7 @@ import { LabelInputField, CheckboxField } from "react-semantic-redux-form";
 import { validate } from "../../components/validator/validator";
 
 import { Link } from "react-router-dom";
+import HeaderComponent from "../../components/header/header.component";
 
 const SignIn = (props) => {
   const [error, setError] = useState(null);
@@ -29,6 +30,7 @@ const SignIn = (props) => {
 
   return (
     <div>
+      <HeaderComponent />
       <Grid padded stacked="true" centered>
         <Grid.Column mobile={16} tablet={8} computer={5}>
           <Header as="h2">Sign in </Header>
@@ -40,7 +42,7 @@ const SignIn = (props) => {
                 name="email"
                 component={LabelInputField}
                 label={{
-                  content: <Icon color="blue" name="mail" />,
+                  content: <Icon id="custom-icon" name="mail" />,
                 }}
                 labelPosition="left"
                 placeholder="Email"
@@ -55,7 +57,7 @@ const SignIn = (props) => {
                 component={LabelInputField}
                 type="password"
                 label={{
-                  content: <Icon color="blue" name="lock" />,
+                  content: <Icon id="custom-icon" name="lock" />,
                 }}
                 labelPosition="left"
                 placeholder="Password"
@@ -67,7 +69,7 @@ const SignIn = (props) => {
                   label="Stay sign in"
                 />
               </Form.Group>
-              <Button  submitting={submitting} fluid size="large">
+              <Button  id="custom-btn" submitting={submitting} fluid size="large">
                 Login
               </Button>
             </Form>

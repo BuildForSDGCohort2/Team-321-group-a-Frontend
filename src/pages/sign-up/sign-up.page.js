@@ -21,7 +21,7 @@ import { validate } from "../../components/validator/validator";
 import { Link } from "react-router-dom";
 
 import { RenderFieldSelect } from "../helper/render-field-select";
-
+import HeaderComponent from "../../components/header/header.component";
 
 const SignUp = (props) => {
   const { handleSubmit, submitting, history, signUpSuccess } = props;
@@ -39,6 +39,7 @@ const SignUp = (props) => {
 
   return (
     <div>
+      <HeaderComponent />
       <Grid padded stacked centered>
         <Grid.Column mobile={16} tablet={8} computer={5}>
           <Header as="h2">Create a Secure Account</Header>
@@ -50,7 +51,7 @@ const SignUp = (props) => {
                 name="fullname"
                 component={LabelInputField}
                 label={{
-                  content: <Icon color="blue" name="user" />,
+                  content: <Icon id="custom-icon" name="user" />,
                 }}
                 labelPosition="left"
                 placeholder="Fullname"
@@ -61,7 +62,7 @@ const SignUp = (props) => {
                 component={LabelInputField}
                 type="text"
                 label={{
-                  content: <Icon color="blue" name="phone" />,
+                  content: <Icon id="custom-icon" name="phone" />,
                 }}
                 labelPosition="left"
                 placeholder="Phone number"
@@ -71,7 +72,7 @@ const SignUp = (props) => {
                 name="email"
                 component={LabelInputField}
                 label={{
-                  content: <Icon color="blue" name="mail" />,
+                  content: <Icon id="custom-icon" name="mail" />,
                 }}
                 labelPosition="left"
                 placeholder="Email"
@@ -82,7 +83,7 @@ const SignUp = (props) => {
                 component={LabelInputField}
                 type="password"
                 label={{
-                  content: <Icon color="blue" name="lock" />,
+                  content: <Icon id="custom-icon" name="lock" />,
                 }}
                 labelPosition="left"
                 placeholder="Password"
@@ -102,13 +103,13 @@ const SignUp = (props) => {
                   label="Stay sign in"
                 />
               </Form.Group>
-              <Button color="gray" submitting={submitting} fluid size="large">
+              <Button id="custom-btn" submitting={submitting} fluid size="large">
                 Sign up
               </Button>
             </Form>
           </Segment>
           <Message>
-            Already registered?<Link to="/">Sign In</Link>
+            Already registered?<Link to="/signin">Sign In</Link>
           </Message>
         </Grid.Column>
       </Grid>
