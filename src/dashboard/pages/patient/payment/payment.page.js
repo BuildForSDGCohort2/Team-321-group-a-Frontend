@@ -27,7 +27,6 @@ const Payment = (props) => {
       onSuccess,
       onClose,
     });
-    console.log()
   };
 
   return (

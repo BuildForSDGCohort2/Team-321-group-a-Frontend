@@ -10,7 +10,7 @@ export const hospitalData = [
 export const specialistData = [
   {
     id: 0,
-    name: "Mr. kelvin Oluwatobi",
+    name: "kelvin Oluwatobi",
     rate: 5,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/boy.bmp",
     profession: "Radiologist",
@@ -30,7 +30,7 @@ export const specialistData = [
   },
   {
     id: 2,
-    name: "Mr. Mark john",
+    name: "Mark john",
     rate:4,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/boy.bmp",
     profession: "Medical assistant",
@@ -40,7 +40,7 @@ export const specialistData = [
   },
   {
     id: 3,
-    name: "Dr. Mohammad saul",
+    name: "Mohammad saul",
     rate: 5,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/girl.png",
     profession: "anesthesiologist",
@@ -50,7 +50,7 @@ export const specialistData = [
   },
   {
     id: 4,
-    name: "Dr. Adulahi mohammad",
+    name: "Adulahi mohammad",
     rate: 4,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/boy.bmp",
     profession: "Surgeon",
@@ -60,7 +60,7 @@ export const specialistData = [
   },
   {
     id: 5,
-    name: "Mr. Uchenna smiles",
+    name: "Uche smiles",
     rate: 5,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/girl.png",
     profession: "Physician",
