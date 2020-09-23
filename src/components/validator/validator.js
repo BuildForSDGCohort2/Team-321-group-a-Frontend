@@ -21,14 +21,37 @@ export const validate = values => {
       errors.email = "Invalid email address"
     }
   
-    if(!values.password){
+    if(!values.password) {
       errors.password = "Required"
     }else if (Number(values.password.length) < 5) {
       errors.password = "Password must not be less than 5"
     }
 
-    if(!values.role){
-      errors.role = "Required"
+    if(!values.account_type) { 
+      errors.account_type = "Required"
+    }
+
+    if(!values.date) {
+      errors.date = "Required"
+    }
+
+    if(!values.aim) {
+      errors.aim = "Required"
+    }
+    if(!values.start_time) {
+      errors.start_time = "Required"
+    }
+
+    if(!values.end_time) {
+      errors.end_time = "Required"
+    }
+
+    if(!values.hospital) {
+      errors.hospital = "Required"
+    }
+
+    if(!values.amount) {
+      errors.amount = "Required"
     }
   
     return errors

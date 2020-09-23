@@ -8,31 +8,31 @@ export const SidebarData = {
   specialist: 
   [{
       title: "Home",
-      path: "/specialist",
+      path: "/dashboard/specialist",
       icon: <AiIcons.AiFillHome />,
       cName: "nav-text"
     },
     {
       title: "Reports",
-      path: "/specialist/reports",
+      path: "/dashboard/specialist/reports",
       icon: <IoIcons.IoIosPaper />,
       cName: "nav-text"
     },
     {
         title: "Patients",
-        path: "/specialist/patients",
+        path: "/dashboard/specialist/patients",
         icon: <IoIcons.IoIosPaper />,
         cName: "nav-text"
       },
     {
       title: "Messages",
-      path: "/specialist/messages",
+      path: "/dashboard/specialist/messages",
       icon: <FaIcons.FaEnvelopeOpenText />,
       cName: "nav-text"
     },
     {
       title: "Support",
-      path: "/specialist/support",
+      path: "/dashboard/specialist/support",
       icon: <IoIcons.IoMdHelpCircle />,
       cName: "nav-text"
     }
@@ -41,25 +41,25 @@ export const SidebarData = {
   hospital: [
     {
       title: "Home",
-      path: "/hospital",
+      path: "/dashboard/hospital",
       icon: <AiIcons.AiFillHome />,
       cName: "nav-text"
     },
     {
       title: "Specialists",
-      path: "/hospital/specialists",
+      path: "/dashboard/hospital/specialists",
       icon: <FaIcons.FaCartPlus />,
       cName: "nav-text"
     },
     {
       title: "Messages",
-      path: "/hospital/messages",
+      path: "/dashboard/hospital/messages",
       icon: <FaIcons.FaEnvelopeOpenText />,
       cName: "nav-text"
     },
     {
       title: "Support",
-      path: "/hospital/support",
+      path: "/dashboard/hospital/support",
       icon: <IoIcons.IoMdHelpCircle />,
       cName: "nav-text"
     }
@@ -68,31 +68,37 @@ export const SidebarData = {
   patient: [
     {
       title: "Home",
-      path: "/patient",
+      path: "/dashboard/patient",
       icon: <AiIcons.AiFillHome />,
       cName: "nav-text"
     },
     {
       title: "Hospitals",
-      path: "/patient/hospitals",
+      path: "/dashboard/patient/hospitals",
+      icon: <FaIcons.FaUniversity />,
+      cName: "nav-text"
+    },
+    {
+      title: "Specialists",
+      path: "/dashboard/patient/specialists",
       icon: <FaIcons.FaHospitalAlt />,
       cName: "nav-text"
     },
     {
       title: "Appointment",
-      path: "/patient/appointment",
+      path: "/dashboard/patient/appointments",
       icon: <AiIcons.AiOutlineWhatsApp />,
       cName: "nav-text"
     },
     {
       title: "Messages",
-      path: "/patient/messages",
+      path: "/dashboard/patient/messages",
       icon: <FaIcons.FaEnvelopeOpenText />,
       cName: "nav-text"
     },
     {
       title: "Support",
-      path: "/patient/support",
+      path: "/dashboard/patient/support",
       icon: <IoIcons.IoMdHelpCircle />,
       cName: "nav-text"
     }

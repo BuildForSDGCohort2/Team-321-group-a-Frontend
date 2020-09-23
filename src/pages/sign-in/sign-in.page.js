@@ -70,7 +70,7 @@ const SignIn = (props) => {
                 />
               </Form.Group>
               <Button  id="custom-btn" submitting={submitting} fluid size="large">
-                Login
+                Signin
               </Button>
             </Form>
           </Segment>

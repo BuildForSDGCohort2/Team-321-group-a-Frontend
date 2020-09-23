@@ -1,6 +1,6 @@
 .header-right {
   position: relative;
-  left: 46vw;
+  left: 35vw;
 }
 
 .option {
@@ -41,12 +41,12 @@
   .for-btn {
     display: block;
     margin-bottom: 30px;
-    margin-left: 52px;
+    margin-left: 70px;
   }
 
   .logo-container {
     position: absolute;
-    right: 82%;
+    right: 76%;
     top: 3%;
   }
 }

@@ -17,3 +17,9 @@ body {
 #custom-icon {
   color: #6b6291;
 }
+
+@media screen and (max-width: 670px) {
+  #table-style {
+    padding: .25em 3.75em !important; 
+  }
+}

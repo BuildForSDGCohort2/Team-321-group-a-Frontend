@@ -8,19 +8,19 @@ import { IconContext } from "react-icons";
 import { Icon } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
-// function Navbar({userRole: {role}}) {
-function Navbar() {
+// function Navbar({AccountType: {account_type}}) {
+function SidebarComponent() {
 
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
 
   function renderSidebar() {
-    // if (role === "specialist") {
+    // if (account_type === "specialist") {
     //   return SidebarData.specialist;
-    // } else if (role === "hospital") {
+    // } else if (account_type === "hospital") {
     //   return SidebarData.hospital;
-    // } else if (role === "patient") {
+    // } else if (account_type === "patient") {
     //   return SidebarData.patient;
     // }
     return SidebarData.patient
@@ -61,7 +61,7 @@ function Navbar() {
 }
 
 const mapStateToProps = ({user: {currentUser}}) => ({
-  userRole: currentUser
+  AccountType: currentUser
 });
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps)(SidebarComponent);

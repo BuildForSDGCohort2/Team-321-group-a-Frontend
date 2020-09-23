@@ -2,10 +2,12 @@ import React from "react";
 import { Grid, Button, Card, Image, Rating } from "semantic-ui-react";
 import { withRouter } from "react-router-dom";
 
-import { specialistData } from "../Data";
-import Sidebar from "../../sidebar/Sidebar";
 
-function SpecialistList({ history }) {
+import Sidebar from "../../../sidebar/Sidebar";
+import { specialistData } from "../../Data";
+
+
+function ListSpecialistPage({ history }) {
   const extra = (
     <Button
       fluid
@@ -20,9 +22,9 @@ function SpecialistList({ history }) {
   return (
     <div>
       <Sidebar />
-      <Grid padded relaxed>
+      <Grid padded relaxed centered column={2}>
         {specialistData.map((data) => (
-          <Grid.Column mobile={16} tablet={8} computer={4}>
+          <Grid.Column mobile={16} tablet={8} computer={5}>
               <Card style={{ marginLeft: "15%" }}>
                 <Card.Content>
                   <Image floated="right" size="tiny" src={data.imageUrl} />
@@ -47,10 +49,11 @@ function SpecialistList({ history }) {
                 <Card.Content extra>{extra}</Card.Content>
               </Card>
           </Grid.Column>
+         
         ))}
       </Grid>
     </div>
   );
 }
 
-export default withRouter(SpecialistList);
+export default withRouter(ListSpecialistPage);

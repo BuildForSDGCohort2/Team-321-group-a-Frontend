@@ -14,7 +14,7 @@ import {
   Header,
 } from "semantic-ui-react";
 
-import { LabelInputField, CheckboxField } from "react-semantic-redux-form";
+import { LabelInputField } from "react-semantic-redux-form";
 
 import { validate } from "../../components/validator/validator";
 
@@ -28,10 +28,10 @@ const SignUp = (props) => {
 
   const onSubmit = (props) => {
     signUpSuccess(props);
-    history.push(props.role);
+    history.push(props.account_type);
   };
 
-  const userRole = [
+  const accountType = [
     { text: "patient", value: "patient" },
     { text: "hospital", value: "hospital" },
     { text: "specialist", value: "specialist" },
@@ -89,20 +89,13 @@ const SignUp = (props) => {
                 placeholder="Password"
               />
               <Field
-                name="role"
+                name="account_type"
                 component={RenderFieldSelect}
                 type="select"
-                label="Role"
-                options={userRole}
+                label="Account Type"
+                options={accountType}
               />
 
-              <Form.Group>
-                <Field
-                  name="remember"
-                  component={CheckboxField}
-                  label="Stay sign in"
-                />
-              </Form.Group>
               <Button id="custom-btn" submitting={submitting} fluid size="large">
                 Sign up
               </Button>
