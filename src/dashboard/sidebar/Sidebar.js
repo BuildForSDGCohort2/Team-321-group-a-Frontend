@@ -23,7 +23,7 @@ function SidebarComponent() {
     // } else if (account_type === "patient") {
     //   return SidebarData.patient;
     // }
-    return SidebarData.patient
+    return SidebarData.patient;
   }
 
   return (

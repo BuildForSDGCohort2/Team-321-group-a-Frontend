@@ -1,24 +1,19 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-
-import { Form, Icon, Button, Grid, Segment, Header } from "semantic-ui-react";
-
+import { Form, Icon, Button, Grid, Header } from "semantic-ui-react";
 import { LabelInputField } from "react-semantic-redux-form";
+
+
 import { validate } from "../../../../components/validator/validator";
 import { RenderFieldSelect, renderField } from "../../../../pages/helper/render-field-select";
+import './book-appointment.styles.css';
 
 const BookAppiontment = (props) => {
   const { handleSubmit, submitting } = props;
 
   const onSubmit = (props) => {
-      console.log(props);
-  };
 
-  const hospitalList = [
-    { text: "patient", value: "patient" },
-    { text: "hospital", value: "hospital" },
-    { text: "specialist", value: "specialist" },
-  ];
+  };
 
   const venueType = [
     { text: "Hospital", value: "hospitl" },
@@ -27,13 +22,13 @@ const BookAppiontment = (props) => {
   ];
 
   return (
-    <div>
-      <Grid padded stacked centered>
-        <Grid.Column computer={6}>
-            <Header as="h2" style={{justifyContent:"center"}}>
+    <div id="appointment-container">
+      <Grid centered>
+        <Grid.Column mobile={16} tablet={8} computer={6}>
+            <Header as="h2" id="appointment-header">
               Schedule Appointment
             </Header>
-            <Form size="large" onSubmit={handleSubmit(onSubmit)}>
+            <Form  onSubmit={handleSubmit(onSubmit)}>
             <Field
                 fluid
                 name="specialist"

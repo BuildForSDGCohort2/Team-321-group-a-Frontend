@@ -13,14 +13,17 @@ import Footer from "./components/footer/footer.component";
 
 
 import Dashboard from "./dashboard/pages/dashboard.page";
-import DashboardHospitalPage from "./dashboard/pages/hospital/hospital.page";
-import HospitalSpecialistPage from "./dashboard/pages/hospital/hospital-specialist.page";
+import DashboardHealthOrgPage from "./dashboard/pages/health-org/health-org.page";
+import HealthOrgSpecialistPage from "./dashboard/pages/health-org/health-org-specialist.page";
 import paymentPage from "./dashboard/pages/patient/payment/payment.page";
-import PatientHospitalPage from "./dashboard/pages/patient/hospital/patient-hospital.page";
+import PatientHospitalPage from "./dashboard/pages/patient/health-org/patient-health-org.page";
 import Appointment from "./dashboard/pages/patient/appointment/appointment.page";
+import NotificationPage from "./dashboard/pages/patient/notification/notification.page";
+
 
 import PatientPage from "./dashboard/pages/patient/patient.page";
 import ListSpecialistPage from "./dashboard/pages/patient/specialists/list-specialist.page";
+
 
 
 export default function App() {
@@ -28,12 +31,12 @@ export default function App() {
   return (
     <div>
       <Switch>
-        <Route path="/hospital/specialists" component={HospitalSpecialistPage} />
-       
-        <Route path="/dashboard/patient/appointment/pay" component={paymentPage} />
-        <Route path="/dashboard/hospital/specialists" component={HospitalSpecialistPage} />
-        <Route path="/dashboard/hospital" component={DashboardHospitalPage} />
+        <Route path="/dashboard/healthorg/specialists" component={HealthOrgSpecialistPage} />
+        <Route path="/dashboard/healthorg" component={DashboardHealthOrgPage} />
 
+        
+        <Route path="/dashboard/patient/notifications" component={NotificationPage} />
+        <Route path="/dashboard/patient/appointment/pay" component={paymentPage} />
         <Route path="/dashboard/patient/appointments" component={Appointment} />
         <Route path="/dashboard/patient/specialists" component={ListSpecialistPage} />
         <Route path="/dashboard/patient/hospitals" component={PatientHospitalPage} />

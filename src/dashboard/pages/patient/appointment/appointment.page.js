@@ -6,12 +6,12 @@ import SidebarComponent from "../../../sidebar/Sidebar";
 
 function Appointment() {
   return (
-   <div>
+    <div>
       <SidebarComponent />
-    <Container>
+      <Container>
         <ListAppointment />
-    </Container>
-   </div>
+      </Container>
+    </div>
   );
 }
 

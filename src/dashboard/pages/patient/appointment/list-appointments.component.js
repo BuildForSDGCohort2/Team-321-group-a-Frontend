@@ -6,7 +6,10 @@ import BookAppointmentComponent from "./book-appointment.component";
 const ListAppointment = ({ history }) => {
   const [viewform, setForm] = useState(false);
   return (
-    <div>
+    <div style={{ marginTop: "20px" }}>
+      <Button fluid color="green" onClick={() => setForm(!viewform)}>
+        {viewform ? <div><Icon name="list alternate outline" /> View Appointments </div>: <div><Icon name="plus" />  Add New</div>}
+      </Button>
       {viewform ? (
         <BookAppointmentComponent />
       ) : (
@@ -17,7 +20,7 @@ const ListAppointment = ({ history }) => {
               selectable
               stackable={true}
               padded
-              style={{ marginTop: "40px"}}
+              style={{ marginTop: "5px" }}
               id="table-style"
             >
               <Table.Header>
@@ -63,13 +66,7 @@ const ListAppointment = ({ history }) => {
 
               <Table.Footer>
                 <Table.Row>
-                  <Table.HeaderCell colSpan="6">
-                    <Button color="green" onClick={() => setForm(!viewform)}>
-                      {" "}
-                      <Icon name="plus" />
-                      Add New
-                    </Button>
-                  </Table.HeaderCell>
+                  <Table.HeaderCell colSpan="6"></Table.HeaderCell>
                 </Table.Row>
               </Table.Footer>
             </Table>

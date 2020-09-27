@@ -5,7 +5,7 @@ import { Button } from "semantic-ui-react";
 
 function HeaderComponent({ history }) {
   return (
-    <div className="header">
+    <div className="nav-header">
       <div>
         <Link className="logo-container" to="/">
           DocBook
