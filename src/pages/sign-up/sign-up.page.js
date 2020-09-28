@@ -28,7 +28,7 @@ const SignUp = (props) => {
 
   const onSubmit = (props) => {
     signUpSuccess(props);
-    history.push(props.account_type);
+    // history.push('/dashboard/'+props.account_type);
   };
 
   const accountType = [
@@ -117,7 +117,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const SignUpForm = reduxForm({
-  form: "signInForm", // a unique identifier for this form
+  form: "signUpForm", // a unique identifier for this form
   validate,
 })(SignUp);
 

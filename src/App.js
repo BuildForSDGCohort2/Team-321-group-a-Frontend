@@ -20,9 +20,11 @@ import PatientHospitalPage from "./dashboard/pages/patient/health-org/patient-he
 import Appointment from "./dashboard/pages/patient/appointment/appointment.page";
 import NotificationPage from "./dashboard/pages/patient/notification/notification.page";
 import HistoryPage from "./dashboard/pages/patient/history/history.page";
+import RecordsPage from "./dashboard/pages/patient/records/records.page";
 
 import PatientPage from "./dashboard/pages/patient/patient.page";
 import ListSpecialistPage from "./dashboard/pages/patient/specialists/list-specialist.page";
+
 
 
 
@@ -36,6 +38,7 @@ export default function App() {
         <Route path="/dashboard/healthorg" component={DashboardHealthOrgPage} />
 
         
+        <Route path="/dashboard/patient/records" component={RecordsPage} />
         <Route path="/dashboard/patient/history" component={HistoryPage} />
         <Route path="/dashboard/patient/notifications" component={NotificationPage} />
         <Route path="/dashboard/patient/appointment/pay" component={paymentPage} />

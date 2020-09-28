@@ -25,7 +25,7 @@ const SignIn = (props) => {
   const { handleSubmit, submitting, history } = props;
 
   const onSubmit = (props) => {
-    history.push("/dashboard/" + props.role);
+    history.push('/dashboard/patient');
   };
 
   return (

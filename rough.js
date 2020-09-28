@@ -1,0 +1,1 @@
+<input type="file" onChange={e =>  setFile(URL.createObjectURL(e.target.files[0]))} />
