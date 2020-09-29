@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Button, Grid, Header, Image, Modal } from 'semantic-ui-react'
+import FilePreviewer from 'react-file-previewer';
+import { Button, Grid, Header, Modal } from 'semantic-ui-react'
 
-const ImageComponent = () => {
+const FileComponent = () => {
     const [open, setOpen] = useState(false)
     return (
         <div>
@@ -13,7 +14,7 @@ const ImageComponent = () => {
                 size='small'
                 trigger={<Grid>
                     <Grid.Column mobile={8} tablet={8} computer={8}>
-                        <Header as="h4">Image</Header>
+                        <Header as="h4">Document</Header>
                     </Grid.Column>
                     <Grid.Column mobile={8} tablet={8} computer={8}>
                         <Button floated="right">View</Button>
@@ -21,12 +22,9 @@ const ImageComponent = () => {
                 </Grid>}
             >
                 <Modal.Content>
-                    <Image
-                        src="https://knect365.imgix.net/article/images/cacheable/bd64cf28-498e-44df-be77-3e74cd079783-featured-49f3a3c3ecd5bdb5a10037c1b80de2ff.jpg?fit=max&or=0&compress=true"
-                        as="a"
-                        size="big"
-                        href="https://knect365.imgix.net/article/images/cacheable/bd64cf28-498e-44df-be77-3e74cd079783-featured-49f3a3c3ecd5bdb5a10037c1b80de2ff.jpg?fit=max&or=0&compress=true"
-                        target="_blank"
+                    <FilePreviewer file={{
+                        url: "https://cors-anywhere.herokuapp.com/http://www.fao.org/3/i3261e/i3261e07.pdf"
+                    }}
                     />
                 </Modal.Content>
             </Modal>
@@ -34,4 +32,4 @@ const ImageComponent = () => {
     )
 }
 
-export default ImageComponent;
+export default FileComponent;

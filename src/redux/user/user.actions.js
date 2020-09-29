@@ -39,7 +39,7 @@ export const signUpStart = () => ({
 export const signUpSuccess = user => dispatch => {
   dispatch(signUpStart());
   axios
-  .post('https://herokutestm3dus2.herokuapp.com/api/users/', user)
+  .post('https://cors-anywhere.herokuapp.com/https://herokutestm3dus2.herokuapp.com/api/users/', user)
   .then(res => 
     dispatch({
       type: UserActionTypes.SIGN_UP_SUCCESS,

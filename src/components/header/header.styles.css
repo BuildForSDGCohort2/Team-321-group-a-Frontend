@@ -10,9 +10,14 @@
   color: #6b6291;
 }
 
+.options {
+  position: relative;
+  right: 5%;
+}
+
 .for-btn {
   position: relative;
-  right: 0%;
+  right: 5%;
 }
 
 #nav-btn {
@@ -41,12 +46,12 @@
   .for-btn {
     display: block;
     margin-bottom: 30px;
-    margin-left: 70px;
+    margin-left: 90px;
   }
 
   .logo-container {
     position: absolute;
-    right: 76%;
+    right: 77%;
     top: 3%;
   }
 }

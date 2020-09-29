@@ -1,22 +1,44 @@
-import React from "react";
-import { Button, Select, Input } from "semantic-ui-react";
+import React, { useState } from "react";
+import { Radio, Input, Grid, Form } from "semantic-ui-react";
 
-const options = [
-    { key: "all", text: "All", value: "all" },
-    { key: "date", text: "Date", value: "date" },
-    { key: "name", text: "Name", value: "name" },
-]
+const SearchAtivity = () => {
+    const [value, setValue] = useState(null);
+    return (
+        <div>
+            <Grid>
+                <Grid.Column mobile={8}>
+                    <Form>
+                        <Form.Field>
+                            <b>{value}</b>
+                        </Form.Field>
+                        <Form.Field>
+                            <Radio
+                                label="Search By Name"
+                                name="radioGroup"
+                                value="name"
+                                checked={value === "By Name"}
+                                onChange={(e, { value }) => setValue(value)}
+                            />
+                        </Form.Field>
+                        <Form.Field>
+                            <Radio
+                                label="Or By Date"
+                                name="radioGroup"
+                                value="date"
+                                checked={value === "By Date"}
+                                onChange={(e, { value }) => setValue(value)}
+                            />
+                        </Form.Field>
+                        <div style={{ marginBottom: "20px" }}>
+                            <Input action="Search" placeholder="Search..." />
+                        </div>
+                    </Form>
+                </Grid.Column>
+            </Grid>
 
-const SearchAtivity = () => (
-    <div>
-        <Input type="text" placeholder="Search..." action>
-            <input />
-            <Select compact options={options} defaultValue="date" />
-            <Button type="submit">Search</Button>
-        </Input>
 
-
-    </div>
-)
+        </div>
+    )
+}
 
 export default SearchAtivity;
