@@ -33,7 +33,7 @@ const SignUp = (props) => {
 
   const accountOptions = [
     { text: "Patient", value: "patient" },
-    { text: "Health Organization", value: "healthOrg" },
+    { text: "Health Organization", value: "healthorg" },
     { text: "Company", value: "company" },
     { text: "Specialist", value: "specialist" },
   ];

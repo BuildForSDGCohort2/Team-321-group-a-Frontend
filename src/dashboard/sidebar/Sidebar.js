@@ -7,17 +7,9 @@ import "./Sidebar.css";
 import { IconContext } from "react-icons";
 import { Icon } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { setCurrentUser } from '../../redux/user/user.actions';
 
 function SidebarComponent(props) {
   const { AccountType: {accountType}, setCurrentUser} = props;
-
-  // useEffect(() => {
-  //   // setCurrentUser()
-  //   console.log(props.AccountType);
-  // },[]);
-
-
 
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
@@ -25,16 +17,13 @@ function SidebarComponent(props) {
   function renderSidebar() {
     if (accountType === "specialist") {
       return SidebarData.specialist;
-    } else if (accountType === "healthOrg") {
+    } else if (accountType === "healthorg") {
       return SidebarData.healthorg;
     } else if (accountType === "patient") {
       return SidebarData.patient;
     } else if (accountType === "company") {
       return SidebarData.patient;
     }
-    // console.log(currentUser);
-    // return SidebarData.patient;
-    
   }
 
   return (
@@ -78,13 +67,5 @@ function SidebarComponent(props) {
 const mapStateToProps = ({ user: { currentUser } }) => ({
   AccountType: currentUser,
 });
-
-// const mapStateToProps = (state) => ({
-//   AccountType: state,
-// });
-
-// const mapDispatchToProps = dispatch => ({
-//   setCurrentUser: () => dispatch(setCurrentUser())
-// });
 
 export default connect(mapStateToProps, )(SidebarComponent);

@@ -53,7 +53,7 @@ const BookAppiontment = (props) => {
               />
               <Field
                 fluid
-                name="start_time"
+                name="startTime"
                 component={LabelInputField}
                 type="time"
                 label="Start Time"
@@ -61,12 +61,12 @@ const BookAppiontment = (props) => {
               />
               <Field
                 fluid
-                name="end_time"
+                name="endTime"
                 component={LabelInputField}
                 type="time"
                 label="End Time"
                 labelPosition="left"
-                placeholder="end_time"
+                placeholder="End Time"
               />
               <Field
                 fluid

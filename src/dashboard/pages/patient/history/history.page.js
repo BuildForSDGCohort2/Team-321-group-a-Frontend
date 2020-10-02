@@ -18,6 +18,6 @@ const HistoryPage = () => (
             <Tab style={{ marginTop: "40px" }} id="search-grid-container" menu={{ fluid: true, id: "tab-activity", vertical: true, tabular: true }} panes={panes} />
         </Container>
     </div>
-)
+);
 
 export default HistoryPage;

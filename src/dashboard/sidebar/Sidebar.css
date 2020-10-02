@@ -15,14 +15,14 @@
   
   .nav-menu {
     background-color: #6B6291;
-    width: 250px;
+    width: 230px;
     height: 100vh;
     display: flex;
     justify-content: center;
     position: absolute;
     z-index:  1;
     top: 0;
-    left: -100%;
+    left: -90%;
     transition: 850ms;
   }
   
@@ -35,9 +35,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 6px 0px 6px 12px;
     list-style: none;
-    height: 60px;
+    height: 53px;
   }
   
   .nav-text a {

@@ -27,8 +27,8 @@ export const validate = values => {
       errors.password = "Password must not be less than 5";
     }
 
-    if(!values.account_type) { 
-      errors.account_type = "Required";
+    if(!values.accountType) { 
+      errors.accountType = "Required";
     }
 
     if(!values.date) {
@@ -39,11 +39,11 @@ export const validate = values => {
       errors.aim = "Required";
     }
     if(!values.start_time) {
-      errors.start_time = "Required";
+      errors.startTime = "Required";
     }
 
     if(!values.end_time) {
-      errors.end_time = "Required";
+      errors.endTime = "Required";
     }
 
     if(!values.hospital) {
