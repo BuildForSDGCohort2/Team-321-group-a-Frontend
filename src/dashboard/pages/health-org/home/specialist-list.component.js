@@ -5,7 +5,7 @@ import { List, Image, Header, Button } from "semantic-ui-react";
 
 function SpecialistListComponent() {
   return (
-    <div style={{marginTop:"30%"}}>
+    <div >
       <Header size="h3">Available Specialists</Header>
      <List>
     <List.Item>

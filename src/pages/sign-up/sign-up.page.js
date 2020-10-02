@@ -28,13 +28,14 @@ const SignUp = (props) => {
 
   const onSubmit = (props) => {
     signUpSuccess(props);
-    // history.push('/dashboard/'+props.account_type);
+    history.push('/dashboard/'+props.accountType);
   };
 
-  const accountType = [
-    { text: "patient", value: "patient" },
-    { text: "hospital", value: "hospital" },
-    { text: "specialist", value: "specialist" },
+  const accountOptions = [
+    { text: "Patient", value: "patient" },
+    { text: "Health Organization", value: "healthOrg" },
+    { text: "Company", value: "company" },
+    { text: "Specialist", value: "specialist" },
   ];
 
   return (
@@ -89,11 +90,11 @@ const SignUp = (props) => {
                 placeholder="Password"
               />
               <Field
-                name="account_type"
+                name="accountType"
                 component={RenderFieldSelect}
                 type="select"
                 label="Account Type"
-                options={accountType}
+                options={accountOptions}
               />
 
               <Button id="custom-btn" submitting={submitting} fluid size="large">

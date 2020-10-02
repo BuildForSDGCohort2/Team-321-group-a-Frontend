@@ -2,8 +2,6 @@ import React from "react";
 import { Grid, Button, Card, Image, Rating, Popup } from "semantic-ui-react";
 import { withRouter } from "react-router-dom";
 
-
-import Sidebar from "../../../sidebar/Sidebar";
 import { specialistData } from "../../Data";
 
 import "./specialist-list.styles.css";
@@ -22,7 +20,6 @@ function ListSpecialistPage({ history }) {
 
   return (
     <div>
-      <Sidebar />
       <Grid padded relaxed centered column={2}>
         {specialistData.map((data) => (
           <Grid.Column mobile={16} tablet={8} computer={5}>

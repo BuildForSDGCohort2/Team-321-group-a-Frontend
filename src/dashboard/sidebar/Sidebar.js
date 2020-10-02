@@ -1,29 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import "./Sidebar.css";
 import { IconContext } from "react-icons";
-import { Icon } from 'semantic-ui-react';
-import { connect } from 'react-redux';
+import { Icon } from "semantic-ui-react";
+import { connect } from "react-redux";
+import { setCurrentUser } from '../../redux/user/user.actions';
 
-// function Navbar({AccountType: {account_type}}) {
-function SidebarComponent() {
+function SidebarComponent(props) {
+  const { AccountType: {accountType}, setCurrentUser} = props;
+
+  // useEffect(() => {
+  //   // setCurrentUser()
+  //   console.log(props.AccountType);
+  // },[]);
+
+
 
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
-
   function renderSidebar() {
-    // if (account_type === "specialist") {
-    //   return SidebarData.specialist;
-    // } else if (account_type === "hospital") {
-    //   return SidebarData.hospital;
-    // } else if (account_type === "patient") {
-    //   return SidebarData.patient;
-    // }
-    return SidebarData.patient;
+    if (accountType === "specialist") {
+      return SidebarData.specialist;
+    } else if (accountType === "healthOrg") {
+      return SidebarData.healthorg;
+    } else if (accountType === "patient") {
+      return SidebarData.patient;
+    } else if (accountType === "company") {
+      return SidebarData.patient;
+    }
+    // console.log(currentUser);
+    // return SidebarData.patient;
+    
   }
 
   return (
@@ -34,8 +45,12 @@ function SidebarComponent() {
         </Link>
       </div>
       <div className="right-navbar">
-      <Link to="d/"><Icon name="user" size="larg" /></Link>
-        <Link to="/"><Icon name="mail" size="larg" /></Link>
+        <Link to="d/">
+          <Icon name="user" size="larg" />
+        </Link>
+        <Link to="/">
+          <Icon name="mail" size="larg" />
+        </Link>
       </div>
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
@@ -60,8 +75,16 @@ function SidebarComponent() {
   );
 }
 
-const mapStateToProps = ({user: {currentUser}}) => ({
-  AccountType: currentUser
+const mapStateToProps = ({ user: { currentUser } }) => ({
+  AccountType: currentUser,
 });
 
-export default connect(mapStateToProps)(SidebarComponent);
+// const mapStateToProps = (state) => ({
+//   AccountType: state,
+// });
+
+// const mapDispatchToProps = dispatch => ({
+//   setCurrentUser: () => dispatch(setCurrentUser())
+// });
+
+export default connect(mapStateToProps, )(SidebarComponent);

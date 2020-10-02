@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Tab } from "semantic-ui-react";
-import Sidebar from "../../../sidebar/Sidebar";
 import ActivitiesList from "./activities-list.component";
 import RecentActivities from "./recent-activities.component";
 import SearchAtivity from "./search-activity.component";
@@ -15,7 +14,6 @@ const panes = [
 
 const HistoryPage = () => (
     <div>
-        <Sidebar />
         <Container>
             <Tab style={{ marginTop: "40px" }} id="search-grid-container" menu={{ fluid: true, id: "tab-activity", vertical: true, tabular: true }} panes={panes} />
         </Container>

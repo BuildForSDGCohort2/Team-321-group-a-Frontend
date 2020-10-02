@@ -7,7 +7,6 @@ import { Form, Icon, Grid, Segment, Header } from "semantic-ui-react";
 import { LabelInputField } from "react-semantic-redux-form";
 
 import { validate } from "../../../../components/validator/validator";
-import Sidebar from "../../../sidebar/Sidebar";
 
 const Payment = (props) => {
   const [myamount, setAmount] = useState("");
@@ -39,7 +38,6 @@ const Payment = (props) => {
 
   return (
     <div>
-      <Sidebar />
         <Grid padded stacked="true" centered>
           <Grid.Column mobile={16} tablet={8} computer={6}>
             <Segment>

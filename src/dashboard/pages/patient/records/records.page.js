@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Form, Divider, Header, Icon, Image } from "semantic-ui-react";
 
-import Sidebar from "../../../sidebar/Sidebar";
 import AudioComponent from "./audio-component";
 import FileComponent from "./file-component";
 import ImageComponent from "./image-component";
@@ -11,8 +10,7 @@ const RecordsPage = () => {
 
     return (
         <div>
-            <Sidebar />
-            <Grid container centered style={{ marginTop: "2%" }}>
+            <Grid container centered >
                 <Grid.Column mobile={16} tablet={8} computer={8}>
                     <Form>
                         <Form.Field>

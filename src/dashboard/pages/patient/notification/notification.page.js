@@ -2,13 +2,10 @@ import React from "react";
 import { Grid, Segment, Header, List, Icon, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-import Sidebar from "../../../sidebar/Sidebar";
-
 const NotificationPage = () => {
   return (
     <div>
-      <Sidebar />
-      <Grid container style={{ marginTop: "5%" }}>
+      <Grid container >
         <Grid.Column mobile={16} tablet={8} computer={4}>
           <Segment.Group compact floated="left">
             <Segment textAlign="center" padded>

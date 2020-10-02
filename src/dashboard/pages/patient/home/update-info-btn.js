@@ -4,7 +4,7 @@ import { Field, reduxForm } from "redux-form";
 
 import { Form, Icon, Button, Header } from "semantic-ui-react";
 
-import { validate } from "../../../components/validator/validator";
+import { validate } from "../../../../components/validator/validator";
 
 const UpdateInfoBtn = (props) => {
   const { handleSubmit, submitting } = props;

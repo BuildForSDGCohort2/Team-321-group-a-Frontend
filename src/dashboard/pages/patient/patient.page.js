@@ -1,44 +1,29 @@
-import React, { useState } from "react";
-import { Grid, Header, Container, Image, Button } from "semantic-ui-react";
+import React from "react";
+import { Route } from "react-router-dom";
 
-import Sidebar from "../../sidebar/Sidebar";
-import UpdateInfoBtn from "./update-info-btn";
+import PatientHomePage from "./home/patient.home.page";
+import Wallet from "./wallet/wallet.page";
+import RecordsPage from "./records/records.page";
+import HistoryPage from "./history/history.page";
+import NotificationPage from "./notification/notification.page";
+import paymentPage from "./payment/payment.page";
+import Appointment from "./appointment/appointment.page";
+import ListSpecialistPage from "./specialists/list-specialist.page";
+import PatientHospitalPage from "./health-org/patient-health-org.page";
 
-function PatientPage() {
-  const [userinfo, setUserinfo] = useState(false);
+
+function PatientPage({ match }) {
   return (
     <div>
-      <Sidebar />
-      <Container>
-        <div style={{ marginTop: "20px" }}>
-          <Grid columns={3} divided="vertically" centered>
-            <Grid.Column mobile={16} table={8} computer={6}>
-              <Image
-                src="https://react.semantic-ui.com/images/wireframe/square-image.png"
-                size="medium"
-                circular
-              />
-            </Grid.Column>
-
-            <Grid.Column mobile={16} table={8} computer={4}>
-              <Header>Name</Header>
-              <p>email</p>
-              <p>Phone no</p>
-              <p>Wallet</p>
-              <Button onClick={() => setUserinfo(!userinfo)}>
-                {" "}
-                Update Info
-              </Button>
-            </Grid.Column>
-
-            {userinfo ? (
-              <Grid.Column mobile={16} table={8} computer={6}>
-                <UpdateInfoBtn />
-              </Grid.Column>
-            ) : null}
-          </Grid>
-        </div>
-      </Container>
+        <Route exact path={`${match.path}`} component={PatientHomePage} />
+        <Route path={`${match.path}/wallet`} component={Wallet} />
+        <Route path={`${match.path}/records`} component={RecordsPage} />
+        <Route path={`${match.path}/history`} component={HistoryPage} />
+        <Route path={`${match.path}/notifications`} component={NotificationPage} />
+        <Route path={`${match.path}/appointment/pay`} component={paymentPage} />
+        <Route path={`${match.path}/appointments`} component={Appointment} />
+        <Route path={`${match.path}/specialists`} component={ListSpecialistPage} />
+        <Route path={`${match.path}/hospitals`} component={PatientHospitalPage} />
     </div>
   );
 }
