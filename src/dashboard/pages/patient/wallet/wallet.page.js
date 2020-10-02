@@ -1,10 +1,12 @@
 import React from "react";
+import ListWalletInfo from "./list-wallet-info.component";
 
 
 const Wallet = () => {
     return (
         <div>
-            wallent
+            no wallet ? create :
+            <ListWalletInfo />
         </div>
     )
 }

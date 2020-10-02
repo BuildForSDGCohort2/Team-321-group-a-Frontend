@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import FilePreviewer from 'react-file-previewer';
-import { Button, Grid, Header, Modal } from 'semantic-ui-react'
+import React, { useState } from "react";
+import FilePreviewer from "react-file-previewer";
+import { Button, Grid, Header, Modal } from "semantic-ui-react";
 
 const FileComponent = () => {
     const [open, setOpen] = useState(false)
@@ -11,7 +11,7 @@ const FileComponent = () => {
                 onClose={() => setOpen(false)}
                 onOpen={() => setOpen(true)}
                 open={open}
-                size='small'
+                size="small"
                 trigger={<Grid>
                     <Grid.Column mobile={8} tablet={8} computer={8}>
                         <Header as="h4">Document</Header>
@@ -29,7 +29,7 @@ const FileComponent = () => {
                 </Modal.Content>
             </Modal>
         </div>
-    )
+    );
 }
 
 export default FileComponent;

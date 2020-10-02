@@ -46,12 +46,12 @@
   .for-btn {
     display: block;
     margin-bottom: 30px;
-    margin-left: 90px;
+    margin-left: 135px;
   }
 
   .logo-container {
     position: absolute;
-    right: 77%;
+    right: 84%;
     top: 3%;
   }
 }

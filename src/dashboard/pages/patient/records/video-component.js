@@ -29,7 +29,7 @@ const VideoComponent = () => {
                 </Modal.Content>
             </Modal>
         </div>
-    )
+    );
 }
 
 export default VideoComponent;

@@ -31,7 +31,7 @@ const AudioComponent = () => {
                 </Modal.Content>
             </Modal>
         </div>
-    )
+    );
 }
 
 export default AudioComponent;

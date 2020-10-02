@@ -101,7 +101,7 @@ const Payment = (props) => {
         </Grid>
     </div>
   );
-};
+}
 
 export default reduxForm({
   form: "payment", // a unique identifier for this form

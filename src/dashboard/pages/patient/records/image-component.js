@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Button, Grid, Header, Image, Modal } from 'semantic-ui-react'
+import React, { useState } from "react";
+import { Button, Grid, Header, Image, Modal } from "semantic-ui-react";
 
 const ImageComponent = () => {
     const [open, setOpen] = useState(false)
@@ -10,7 +10,7 @@ const ImageComponent = () => {
                 onClose={() => setOpen(false)}
                 onOpen={() => setOpen(true)}
                 open={open}
-                size='small'
+                size="small"
                 trigger={<Grid>
                     <Grid.Column mobile={8} tablet={8} computer={8}>
                         <Header as="h4">Image</Header>
@@ -31,7 +31,7 @@ const ImageComponent = () => {
                 </Modal.Content>
             </Modal>
         </div>
-    )
+    );
 }
 
 export default ImageComponent;

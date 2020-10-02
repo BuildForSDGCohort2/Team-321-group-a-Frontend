@@ -31,7 +31,7 @@ const RecordsPage = () => {
                 </Grid.Column>
             </Grid>
         </div>
-    )
+    );
 }
 
 

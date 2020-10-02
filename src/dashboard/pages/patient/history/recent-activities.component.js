@@ -17,6 +17,6 @@ const RecentActivities = () => (
             </List>
         ))}
     </div>
-)
+);
 
 export default RecentActivities;
