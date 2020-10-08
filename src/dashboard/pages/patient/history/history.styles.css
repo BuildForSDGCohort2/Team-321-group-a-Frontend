@@ -1,0 +1,13 @@
+@media screen and (max-width: 670px) {
+    #tab-activity {
+        border-right: none;
+    }
+    
+    #tab-activity > .ui.menu.fluid, .ui.vertical.menu.fluid {
+        width: 126%!important;
+    }
+
+    #search-grid-container > .ui.grid {
+        margin-right: 0;
+    }
+}

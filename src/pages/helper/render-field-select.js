@@ -1,5 +1,5 @@
 import React from "react";
-import {Form } from "semantic-ui-react";
+import { Form } from "semantic-ui-react";
 
 export const RenderFieldSelect = (field) => (
     <Form.Select
@@ -11,4 +11,15 @@ export const RenderFieldSelect = (field) => (
       onChange={(e, { value }) => field.input.onChange(value)}
     />
   );
-  
+
+  export const renderField = (field) => (
+    <Form.TextArea
+      {...field.input}
+      disabled={field.disabled}
+      label={field.label}
+      options={field.options}
+      placeholder={field.placeholder}
+      fluid
+      onChange={(e, { value }) => field.input.onChange(value)}
+    />
+  );

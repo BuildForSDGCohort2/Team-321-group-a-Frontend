@@ -14,31 +14,32 @@ import {
   Header,
 } from "semantic-ui-react";
 
-import { LabelInputField, CheckboxField } from "react-semantic-redux-form";
+import { LabelInputField } from "react-semantic-redux-form";
 
 import { validate } from "../../components/validator/validator";
 
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 import { RenderFieldSelect } from "../helper/render-field-select";
-
+import HeaderComponent from "../../components/header/header.component";
 
 const SignUp = (props) => {
-  const { handleSubmit, submitting, history, signUpSuccess } = props;
+  const { handleSubmit, history, data:{error, isLoading}, signUpSuccess } = props;
 
   const onSubmit = (props) => {
-    signUpSuccess(props);
-    history.push(props.role);
+    signUpSuccess({props, history});
   };
 
-  const userRole = [
-    { text: "patient", value: "patient" },
-    { text: "hospital", value: "hospital" },
-    { text: "specialist", value: "specialist" },
+  const accountOptions = [
+    { text: "Patient", value: "patient" },
+    { text: "Health Organization", value: "healthorg" },
+    { text: "Company", value: "company" },
+    { text: "Specialist", value: "specialist" },
   ];
 
   return (
     <div>
+      <HeaderComponent />
       <Grid padded stacked centered>
         <Grid.Column mobile={16} tablet={8} computer={5}>
           <Header as="h2">Create a Secure Account</Header>
@@ -47,13 +48,14 @@ const SignUp = (props) => {
             <Form size="large" onSubmit={handleSubmit(onSubmit)}>
               <Field
                 fluid
-                name="fullname"
+                name="username"
                 component={LabelInputField}
+                type="text"
                 label={{
-                  content: <Icon color="blue" name="user" />,
+                  content: <Icon id="custom-icon" name="user" />,
                 }}
                 labelPosition="left"
-                placeholder="Fullname"
+                placeholder="Username"
               />
               <Field
                 fluid
@@ -61,7 +63,7 @@ const SignUp = (props) => {
                 component={LabelInputField}
                 type="text"
                 label={{
-                  content: <Icon color="blue" name="phone" />,
+                  content: <Icon id="custom-icon" name="phone" />,
                 }}
                 labelPosition="left"
                 placeholder="Phone number"
@@ -71,7 +73,7 @@ const SignUp = (props) => {
                 name="email"
                 component={LabelInputField}
                 label={{
-                  content: <Icon color="blue" name="mail" />,
+                  content: <Icon id="custom-icon" name="mail" />,
                 }}
                 labelPosition="left"
                 placeholder="Email"
@@ -82,34 +84,33 @@ const SignUp = (props) => {
                 component={LabelInputField}
                 type="password"
                 label={{
-                  content: <Icon color="blue" name="lock" />,
+                  content: <Icon id="custom-icon" name="lock" />,
                 }}
                 labelPosition="left"
                 placeholder="Password"
               />
               <Field
-                name="role"
+                name="user_type"
                 component={RenderFieldSelect}
                 type="select"
-                label="Role"
-                options={userRole}
+                label="User Type"
+                options={accountOptions}
               />
 
-              <Form.Group>
-                <Field
-                  name="remember"
-                  component={CheckboxField}
-                  label="Stay sign in"
-                />
-              </Form.Group>
-              <Button color="gray" submitting={submitting} fluid size="large">
+              <Button loading={false ||isLoading} id="custom-btn" fluid size="large">
                 Sign up
               </Button>
             </Form>
           </Segment>
-          <Message>
-            Already registered?<Link to="/">Sign In</Link>
-          </Message>
+          {error ? (
+            <Message error style={{textAlign:"center"}}>
+              {error[0]}
+            </Message>
+          ) : (
+            <Message>
+              Already registered?<Link to="/sigin">Sign In</Link>
+            </Message>
+          )}
         </Grid.Column>
       </Grid>
 
@@ -118,13 +119,17 @@ const SignUp = (props) => {
 };
 
 
+const mapStateToProps = ({ user }) => ({
+  data: user,
+});
+
 const mapDispatchToProps = dispatch => ({
   signUpSuccess: userCredentials => dispatch(signUpSuccess(userCredentials))
 });
 
 const SignUpForm = reduxForm({
-  form: "signInForm", // a unique identifier for this form
+  form: "signUpForm", // a unique identifier for this form
   validate,
 })(SignUp);
 
-export default connect(null, mapDispatchToProps)(SignUpForm)
+export default connect(mapStateToProps, mapDispatchToProps)(SignUpForm)

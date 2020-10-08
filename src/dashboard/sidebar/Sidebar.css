@@ -1,9 +1,10 @@
 .navbar {
-    background-color: #060b26;
+    background-color: #6B6291;
     height: 80px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color: #fff;
   }
   
   .menu-bars {
@@ -13,15 +14,15 @@
   }
   
   .nav-menu {
-    background-color: #060b26;
-    width: 250px;
+    background-color: #6B6291;
+    width: 230px;
     height: 100vh;
     display: flex;
     justify-content: center;
     position: absolute;
     z-index:  1;
     top: 0;
-    left: -100%;
+    left: -90%;
     transition: 850ms;
   }
   
@@ -34,9 +35,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 8px 0px 8px 16px;
+    padding: 6px 0px 6px 12px;
     list-style: none;
-    height: 60px;
+    height: 53px;
   }
   
   .nav-text a {
@@ -60,7 +61,7 @@
   }
   
   .navbar-toggle {
-    background-color: #060b26;
+    background-color: #6B6291;
     width: 100%;
     height: 80px;
     display: flex;
@@ -76,4 +77,12 @@
      float: right;
      margin: -50px 15px 65px 0;
      max-height: 10px;
+     color: #fff;
   }
+
+  .right-navbar > .icon{
+    float: right;
+    margin: -50px 15px 65px 0;
+    max-height: 10px;
+    color: #fff;
+ }

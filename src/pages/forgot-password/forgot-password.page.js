@@ -7,6 +7,7 @@ import { Form, Icon, Button, Grid, Segment, Header } from "semantic-ui-react";
 import { LabelInputField } from "react-semantic-redux-form";
 
 import { validate } from "../../components/validator/validator";
+import HeaderComponent from "../../components/header/header.component";
 
 const ForgotPassword = (props) => {
   const { handleSubmit, submitting } = props;
@@ -17,6 +18,7 @@ const ForgotPassword = (props) => {
 
   return (
     <div>
+      <HeaderComponent />
       <Grid padded stacked centered>
         <Grid.Column mobile={16} tablet={8} computer={5}>
           <Segment style={{ marginTop: "100px" }}>
@@ -29,12 +31,12 @@ const ForgotPassword = (props) => {
                 name="email"
                 component={LabelInputField}
                 label={{
-                  content: <Icon color="blue" name="mail" />,
+                  content: <Icon id="custom-icon" name="mail" />,
                 }}
                 labelPosition="left"
                 placeholder="Enter Email Here"
               />
-              <Button color="gray" submitting={submitting} fluid size="large">
+              <Button id="custom-btn" submitting={submitting} fluid size="large">
                 Recover Password
               </Button>
             </Form>

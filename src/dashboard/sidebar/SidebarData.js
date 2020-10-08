@@ -4,99 +4,183 @@ import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 
 export const SidebarData = {
-
-  specialist: 
-  [{
+  specialist: [
+    {
       title: "Home",
-      path: "/specialist",
+      path: "/dashboard/specialist",
       icon: <AiIcons.AiFillHome />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
       title: "Reports",
-      path: "/specialist/reports",
+      path: "/dashboard/specialist/reports",
       icon: <IoIcons.IoIosPaper />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
-        title: "Patients",
-        path: "/specialist/patients",
-        icon: <IoIcons.IoIosPaper />,
-        cName: "nav-text"
-      },
+      title: "Appointment",
+      path: "/dashboard/specialist/appointments",
+      icon: <AiIcons.AiFillSchedule />,
+      cName: "nav-text",
+    },
+    {
+      title: "Patients",
+      path: "/dashboard/specialist/patients",
+      icon: <IoIcons.IoIosPaper />,
+      cName: "nav-text",
+    },
     {
       title: "Messages",
-      path: "/specialist/messages",
+      path: "/dashboard/specialist/messages",
       icon: <FaIcons.FaEnvelopeOpenText />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
       title: "Support",
-      path: "/specialist/support",
+      path: "/dashboard/specialist/support",
       icon: <IoIcons.IoMdHelpCircle />,
-      cName: "nav-text"
-    }
+      cName: "nav-text",
+    },
   ],
 
-  hospital: [
+  healthorg: [
     {
       title: "Home",
-      path: "/hospital",
+      path: "/dashboard/healthorg",
       icon: <AiIcons.AiFillHome />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
       title: "Specialists",
-      path: "/hospital/specialists",
+      path: "/dashboard/healthorg/specialists",
       icon: <FaIcons.FaCartPlus />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
       title: "Messages",
-      path: "/hospital/messages",
+      path: "/dashboard/healthorg/messages",
       icon: <FaIcons.FaEnvelopeOpenText />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
       title: "Support",
-      path: "/hospital/support",
+      path: "/dashboard/healthorg/support",
       icon: <IoIcons.IoMdHelpCircle />,
-      cName: "nav-text"
-    }
+      cName: "nav-text",
+    },
   ],
 
   patient: [
     {
       title: "Home",
-      path: "/patient",
+      path: "/dashboard/patient",
       icon: <AiIcons.AiFillHome />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
       title: "Hospitals",
-      path: "/patient/hospitals",
+      path: "/dashboard/patient/hospitals",
+      icon: <FaIcons.FaUniversity />,
+      cName: "nav-text",
+    },
+    {
+      title: "Specialists",
+      path: "/dashboard/patient/specialists",
       icon: <FaIcons.FaHospitalAlt />,
-      cName: "nav-text"
+      cName: "nav-text",
     },
     {
       title: "Appointment",
-      path: "/patient/appointment",
-      icon: <AiIcons.AiOutlineWhatsApp />,
-      cName: "nav-text"
+      path: "/dashboard/patient/appointments",
+      icon: <AiIcons.AiFillSchedule />,
+      cName: "nav-text",
     },
     {
-      title: "Messages",
-      path: "/patient/messages",
-      icon: <FaIcons.FaEnvelopeOpenText />,
-      cName: "nav-text"
+      title: "History",
+      path: "/dashboard/patient/history",
+      icon: <FaIcons.FaHistory />,
+      cName: "nav-text",
     },
     {
-      title: "Support",
-      path: "/patient/support",
-      icon: <IoIcons.IoMdHelpCircle />,
-      cName: "nav-text"
-    }
+      title: "Records",
+      path: "/dashboard/patient/records",
+      icon: <FaIcons.FaRecordVinyl />,
+      cName: "nav-text",
+    },
+    {
+      title: "Bill",
+      path: "/dashboard/patient/bill",
+      icon: <FaIcons.FaMoneyBill />,
+      cName: "nav-text",
+    },
+    {
+      title: "Payment",
+      path: "/dashboard/patient/payment",
+      icon: <IoIcons.IoLogoEuro />,
+      cName: "nav-text",
+    },
+    {
+      title: "Wallet",
+      path: "/dashboard/patient/wallet",
+      icon: <FaIcons.FaWallet />,
+      cName: "nav-text",
+    },
+    {
+      title: "Notifications",
+      path: "/dashboard/patient/notifications",
+      icon: <FaIcons.FaInbox />,
+      cName: "nav-text",
+    },
   ],
 
-
+  company: [
+    {
+      title: "Home",
+      path: "/dashboard/patient",
+      icon: <AiIcons.AiFillHome />,
+      cName: "nav-text",
+    },
+    {
+      title: "Hospitals",
+      path: "/dashboard/patient/hospitals",
+      icon: <FaIcons.FaUniversity />,
+      cName: "nav-text",
+    },
+    {
+      title: "History",
+      path: "/dashboard/patient/history",
+      icon: <FaIcons.FaHistory />,
+      cName: "nav-text",
+    },
+    {
+      title: "Records",
+      path: "/dashboard/patient/records",
+      icon: <FaIcons.FaRecordVinyl />,
+      cName: "nav-text",
+    },
+    {
+      title: "Bill",
+      path: "/dashboard/patient/bill",
+      icon: <FaIcons.FaMoneyBill />,
+      cName: "nav-text",
+    },
+    {
+      title: "Payment",
+      path: "/dashboard/patient/payment",
+      icon: <IoIcons.IoLogoEuro />,
+      cName: "nav-text",
+    },
+    {
+      title: "Wallet",
+      path: "/dashboard/patient/wallet",
+      icon: <FaIcons.FaWallet />,
+      cName: "nav-text",
+    },
+    {
+      title: "Notifications",
+      path: "/dashboard/patient/notifications",
+      icon: <FaIcons.FaInbox />,
+      cName: "nav-text",
+    },
+  ],
 };

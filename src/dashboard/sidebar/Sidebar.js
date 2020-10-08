@@ -1,30 +1,42 @@
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import store from "store";
 import { SidebarData } from "./SidebarData";
 import "./Sidebar.css";
 import { IconContext } from "react-icons";
-import { Icon } from 'semantic-ui-react';
-import { connect } from 'react-redux';
+import { Icon, Dropdown } from "semantic-ui-react";
+import { connect } from "react-redux";
+import { signOutSuccess } from "../../redux/user/user.actions";
 
-// function Navbar({userRole: {role}}) {
-function Navbar() {
-
+function SidebarComponent(props) {
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => setSidebar(!sidebar);
 
+  const {
+    currentUser: { username, user_type },
+  history, signOutSuccess } = props;
+
 
   function renderSidebar() {
-    // if (role === "specialist") {
-    //   return SidebarData.specialist;
-    // } else if (role === "hospital") {
-    //   return SidebarData.hospital;
-    // } else if (role === "patient") {
-    //   return SidebarData.patient;
-    // }
-    return SidebarData.patient
+    if (user_type === "specialist") {
+      return SidebarData.specialist;
+    } else if (user_type === "healthorg") {
+      return SidebarData.healthorg;
+    } else if (user_type === "patient") {
+      return SidebarData.patient;
+    } else if (user_type === "company") {
+      return SidebarData.company;
+    }
   }
+
+function signOut() {
+  signOutSuccess()
+  history.push("/signin");
+  // store.remove("token");
+  store.clearAll();
+}
 
   return (
     <IconContext.Provider value={{ color: "#fff" }}>
@@ -34,9 +46,24 @@ function Navbar() {
         </Link>
       </div>
       <div className="right-navbar">
-      <Link to="d/"><Icon name="user" size="larg" /></Link>
-        <Link to="/"><Icon name="mail" size="larg" /></Link>
+        <Dropdown
+          icon="user"
+          floating
+          labeled
+          className="icon"
+          direction="left"
+        >
+          <Dropdown.Menu>
+            <Dropdown.Header content={username} />
+            <Dropdown.Divider />
+            <Dropdown.Item icon="sign-out" text="Logout" onClick={() => signOut()} />
+          </Dropdown.Menu>
+        </Dropdown>
+        <Link to="#">
+          <Icon name="inbox" />
+        </Link>
       </div>
+
       <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
@@ -60,8 +87,13 @@ function Navbar() {
   );
 }
 
-const mapStateToProps = ({user: {currentUser}}) => ({
-  userRole: currentUser
+const mapStateToProps = ({ user }) => ({
+  currentUser: user.currentUser.user
 });
 
-export default connect(mapStateToProps)(Navbar);
+const mapDispatchToProps = dispatch => ({
+  signOutSuccess: () => dispatch(signOutSuccess()),
+})
+
+const Sidebar = connect(mapStateToProps, mapDispatchToProps)(SidebarComponent)
+export default withRouter(Sidebar);

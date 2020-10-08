@@ -8,9 +8,18 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-/*   
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  } */
   
+#custom-btn {
+  background-color: #6b6291;
+  color: #fff;
+}
+
+#custom-icon {
+  color: #6b6291;
+}
+
+@media screen and (max-width: 670px) {
+  #table-style {
+    padding: 0.25em 3.75em; 
+  }
+}
