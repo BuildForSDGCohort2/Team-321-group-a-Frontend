@@ -1,0 +1,14 @@
+@media screen and (max-width:670px) {
+    .control-divider {
+        display: none ;
+    }
+}
+
+#plus-btn {
+    height: 60px;
+    border-radius: 10%;
+}
+
+#bal-icon {
+    text-align: center;
+}

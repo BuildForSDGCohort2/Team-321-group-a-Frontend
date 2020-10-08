@@ -55,7 +55,7 @@
   background-color: #63b7f3;
   color: #fff;
   border-radius: 5px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 5px #6b6291;
 }
 
 #align-header {
@@ -67,4 +67,12 @@
 .services-card > p {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 670px) {
+  #my-container {
+    position: relative;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

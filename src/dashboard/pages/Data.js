@@ -14,19 +14,19 @@ export const specialistData = [
     rate: 5,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/boy.bmp",
     profession: "Radiologist",
-    available: "Yes",
+    available: "Not available",
     description:
-      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation, continuous data-driven improvement, and interdisciplinary collaboration. ",
+      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation",
   },
   {
     id: 1,
-    name: "James okafor",
+    name: "Dr. James okafor",
     rate:3,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/girl.png",
     profession: "Optometrist",
-    available: "Yes",
+    available: "Available",
     description:
-      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation, continuous data-driven improvement, and interdisciplinary collaboration. ",
+      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation",
   },
   {
     id: 2,
@@ -34,9 +34,9 @@ export const specialistData = [
     rate:4,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/boy.bmp",
     profession: "Medical assistant",
-    available: "Yes",
+    available: "Not available",
     description:
-      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation, continuous data-driven improvement, and interdisciplinary collaboration. ",
+      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation",
   },
   {
     id: 3,
@@ -44,9 +44,9 @@ export const specialistData = [
     rate: 5,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/girl.png",
     profession: "anesthesiologist",
-    available: "No",
+    available: "Available",
     description:
-      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation, continuous data-driven improvement, and interdisciplinary collaboration. ",
+      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation",
   },
   {
     id: 4,
@@ -54,18 +54,18 @@ export const specialistData = [
     rate: 4,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/boy.bmp",
     profession: "Surgeon",
-    available: "Yes",
+    available: "Not available",
     description:
-      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation, continuous data-driven improvement, and interdisciplinary collaboration. ",
+      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation",
   },
   {
     id: 5,
-    name: "Uchenna smiles",
+    name: "Uche smiles",
     rate: 5,
     imageUrl: "https://homepages.cae.wisc.edu/~ece533/images/girl.png",
     profession: "Physician",
-    available: "No",
+    available: "Available",
     description:
-      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation, continuous data-driven improvement, and interdisciplinary collaboration. ",
+      "Dr. Andra Blomkalns is an innovation advocate who believes the best patient-centered programs depend upon clinical practice innovation",
   },
 ];

@@ -1,13 +1,6 @@
 .header-right {
   position: relative;
-  left: 46vw;
-}
-
-@media screen and (max-width: 812px) and (min-width: 375px) {
-  .header-right {
-    position: relative;
-    left: 8vw;
-  }
+  left: 35vw;
 }
 
 .option {
@@ -15,7 +8,16 @@
   cursor: pointer;
   text-decoration: none;
   color: #6b6291;
-  font-weight: bold;
+}
+
+.options {
+  position: relative;
+  right: 5%;
+}
+
+.for-btn {
+  position: relative;
+  right: 5%;
 }
 
 #nav-btn {
@@ -29,36 +31,28 @@
   background-color: #6b6291;
 }
 
-.header {
+.nav-header {
   height: 80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.header-menu-bars {
-  margin-left: 2rem;
-  font-size: 2rem;
-  background: none;
-}
-
-@media screen and (min-width: 670px) {
-  .header-menu-bars {
-    visibility: hidden;
-  }
-}
-
 @media screen and (max-width: 670px) {
   .options {
-    visibility: hidden;
+    display: none;
   }
-}
 
-@media screen and (max-width: 670px) {
-  .logo-option {
-    position: relative;
-    left: 60vw;
-    margin-top: 30px;
+  .for-btn {
+    display: block;
+    margin-bottom: 30px;
+    margin-left: 135px;
+  }
+
+  .logo-container {
+    position: absolute;
+    right: 84%;
+    top: 3%;
   }
 }
 
@@ -66,4 +60,6 @@
   text-shadow: #6b6291;
   color: #6b6291;
   font-weight: bold;
+  margin-left: 50px;
 }
+

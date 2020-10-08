@@ -1,0 +1,14 @@
+@media screen and (max-width: 670px) {
+    #appointment-container {
+        margin-left: 12%;
+    }
+
+    #appointment-header {
+        font-size: 14px;
+    }
+    
+}
+
+#appointment-header {
+    justify-content: center;
+}

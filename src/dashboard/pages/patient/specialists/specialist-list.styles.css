@@ -1,0 +1,9 @@
+#patient-spec-card {
+    margin-left: 16%;
+}
+
+@media screen and (max-width: 670px) {
+    #patient-spec-card {
+        margin-left: 12%;
+    }
+}
