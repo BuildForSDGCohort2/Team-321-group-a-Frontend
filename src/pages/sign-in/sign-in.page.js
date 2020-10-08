@@ -74,7 +74,7 @@ const SignIn = (props) => {
           </Segment>
           {error ? (
             <Message>
-              Forgot Password?<Link to="/signup">Sign Up</Link>
+              {error}
             </Message>
           ) : (
             <Message>
