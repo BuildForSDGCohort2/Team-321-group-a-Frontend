@@ -7,16 +7,6 @@ import { specialistData } from "../../Data";
 import "./specialist-list.styles.css";
 
 function ListSpecialistPage({ history }) {
-  const extra = (
-    <Button
-      fluid
-      basic
-      color="green"
-      onClick={() => history.push("/dashboard/patient/appointments")}
-    >
-      Book Appointment
-    </Button>
-  );
 
   return (
     <div>
@@ -30,7 +20,15 @@ function ListSpecialistPage({ history }) {
                   <Card.Content>
                     <Card.Header>{data.name}</Card.Header>
                     <Card.Description>
-                      {data.description} <strong>Status: {data.available}</strong> {extra}
+                      {data.description} <strong>Status: {data.available}</strong> 
+                      <Button
+                        fluid
+                        basic
+                        color="green"
+                        onClick={() => history.push(`/dashboard/patient/appointments/${data.id}`)}
+                      >
+                        Book Appointment
+                      </Button>
                     </Card.Description>
                   </Card.Content>
                 </Card>
