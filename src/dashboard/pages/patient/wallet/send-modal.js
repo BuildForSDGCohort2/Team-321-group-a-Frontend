@@ -37,7 +37,7 @@ function SendModal() {
                         <Input name="walletID" placeholder="wallet id" required onChange={(e) => setWalletID(e.target.value)}/>
                     </Grid.Column>
                     <Grid.Column mobile={16} tablet={16} computer={16}>
-                        <Input name="pin" required onChange={(e) => setWalletID(e.target.value)}/>
+                        <Input name="pin" placeholder="pin" required onChange={(e) => setWalletID(e.target.value)}/>
                     </Grid.Column>
                 </Grid>
             </Form>
