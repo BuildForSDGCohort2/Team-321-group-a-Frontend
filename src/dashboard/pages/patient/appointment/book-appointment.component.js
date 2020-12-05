@@ -7,12 +7,15 @@ import { LabelInputField } from "react-semantic-redux-form";
 import { validate } from "../../../../components/validator/validator";
 import { RenderFieldSelect, renderField } from "../../../../pages/helper/render-field-select";
 import './book-appointment.styles.css';
+import { connect } from "react-redux";
+import { addAppointment } from "../../../../redux/appointment/appointment.action";
 
-const BookAppiontment = (props) => {
-  const { handleSubmit, submitting } = props;
+const BookAppointment = (props) => {
+  const { handleSubmit, submitting, addAppointment } = props;
 
   const onSubmit = (props) => {
-
+    addAppointment(props);
+    // console.log(props);
   };
 
   const venueType = [
@@ -42,18 +45,18 @@ const BookAppiontment = (props) => {
               />
               <Field
                 fluid
-                name="date"
+                name="day"
                 component={LabelInputField}
                 type="date"
                 label={{
                   content: <Icon id="custom-icon" name="dna" />
                 }}
                 labelPosition="left"
-                placeholder="Date"
+                placeholder="Day"
               />
               <Field
                 fluid
-                name="startTime"
+                name="start_time"
                 component={LabelInputField}
                 type="time"
                 label="Start Time"
@@ -61,7 +64,7 @@ const BookAppiontment = (props) => {
               />
               <Field
                 fluid
-                name="endTime"
+                name="end_time"
                 component={LabelInputField}
                 type="time"
                 label="End Time"
@@ -70,7 +73,7 @@ const BookAppiontment = (props) => {
               />
               <Field
                 fluid
-                name="aim"
+                name="Aim"
                 type="text"
                 component={renderField}
                 label="Please enter your aim"
@@ -86,7 +89,6 @@ const BookAppiontment = (props) => {
               />
               <Button
                 id="custom-btn"
-                submitting={submitting}
                 fluid
                 size="large"
               >
@@ -99,7 +101,14 @@ const BookAppiontment = (props) => {
   );
 };
 
-export default reduxForm({
+const mapDispatchToProps = dispatch => ({
+  addAppointment: data => dispatch(addAppointment(data))
+})
+
+
+const bookAppointmentComponent = reduxForm({
   form: "bookAppointment", // a unique identifier for this form
   validate,
-})(BookAppiontment);
+})(BookAppointment);
+
+export default connect(null, mapDispatchToProps)(bookAppointmentComponent);

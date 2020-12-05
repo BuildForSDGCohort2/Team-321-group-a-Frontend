@@ -8,6 +8,12 @@
   color: #fff;
   background-color: #6b6291;
   padding: 4%;
+  transition: .7s;
+}
+
+#free-trial-btn:hover {
+  padding: 5%;
+  font-size: 1.5rem;
 }
 
 #services-dark {
@@ -56,6 +62,11 @@
   color: #fff;
   border-radius: 5px;
   box-shadow: 5px 5px #6b6291;
+  transition: transform 1s;
+}
+
+.services-card:hover {
+  transform: translateY(-10px);
 }
 
 #align-header {

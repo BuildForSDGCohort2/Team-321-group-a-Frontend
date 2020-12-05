@@ -1,26 +1,33 @@
 import axios from "axios";
 import store from "store";
+import swal from 'sweetalert';
 import UserActionTypes from "./user.types";
+
+import setAuthToken from "../config/baseUrl";
+
+const token = store.get("token");
 
 export const signInStart = () => ({
   type: UserActionTypes.SIGN_IN_START,
 });
 
 export const signInSuccess = ({username, password, history}) => dispatch => {
-  const url = "https://cors-anywhere.herokuapp.com/https://docbook-backend.herokuapp.com/login";
   dispatch(signInStart());
   axios
-    .post(url,{username, password})
+    .post('/accounts/login',{username, password}, setAuthToken(token))
     .then(response => {
       dispatch({
         type: UserActionTypes.SIGN_IN_SUCCESS,
         payload: response.data,
       });
 
-      history.push("dashboard/"+response.data.user.user_type)
+      store.set("token", response.data.token);
+      history.push("dashboard/"+response.data.user.user_type);
+      console.log(response)
     })
     .catch(err => {
       dispatch(signInFailure(err.response.data.detail));
+      console.log(err.response)
     })
 };
 
@@ -48,7 +55,7 @@ export const signUpFailure = (error) => ({
 });
 
 export const signUpSuccess = ({history, props})  => dispatch => {
-  const url = "https://cors-anywhere.herokuapp.com/https://docbook-backend.herokuapp.com/register";
+  const url = "https://docbook-backend.herokuapp.com/register";
   dispatch(signUpStart())
   axios.post(url, props)
   .then((response) => {
@@ -57,6 +64,7 @@ export const signUpSuccess = ({history, props})  => dispatch => {
       payload: response.data
     })
 
+    swal("Success!", "Registration successful", "success");
     history.push("/signin")
   })
   .catch((error) => {

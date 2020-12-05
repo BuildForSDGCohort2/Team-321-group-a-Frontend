@@ -31,7 +31,7 @@ const SignIn = (props) => {
   return (
     <div>
       <HeaderComponent />
-      <Grid padded stacked="true" centered>
+      <Grid padded stacked="true" textAlign="center">
         <Grid.Column mobile={16} tablet={8} computer={5}>
           <Header as="h2">Sign in </Header>
           <label>Securely login to your account </label>
@@ -62,7 +62,7 @@ const SignIn = (props) => {
                 labelPosition="left"
                 placeholder="Password"
               />
-              <Button id="custom-btn" loading={false ||isLoading} fluid size="large">
+              <Button id="custom-btn" loading={false || isLoading} fluid size="large">
                 Signin
               </Button>
             </Form>

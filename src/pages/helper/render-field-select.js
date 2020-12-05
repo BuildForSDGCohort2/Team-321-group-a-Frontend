@@ -7,7 +7,6 @@ export const RenderFieldSelect = (field) => (
       label={field.label}
       options={field.options}
       placeholder={field.placeholder}
-      fluid
       onChange={(e, { value }) => field.input.onChange(value)}
     />
   );
@@ -19,7 +18,6 @@ export const RenderFieldSelect = (field) => (
       label={field.label}
       options={field.options}
       placeholder={field.placeholder}
-      fluid
       onChange={(e, { value }) => field.input.onChange(value)}
     />
   );

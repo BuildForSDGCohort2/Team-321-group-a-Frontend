@@ -31,19 +31,19 @@ export const validate = values => {
       errors.user_type = "Required";
     }
 
-    if(!values.date) {
-      errors.date = "Required";
+    if(!values.day) {
+      errors.day = "Required";
     }
 
-    if(!values.aim) {
+    if(!values.Aim) {
       errors.aim = "Required";
     }
     if(!values.start_time) {
-      errors.startTime = "Required";
+      errors.start_time = "Required";
     }
 
     if(!values.end_time) {
-      errors.endTime = "Required";
+      errors.end_time = "Required";
     }
 
     if(!values.hospital) {
