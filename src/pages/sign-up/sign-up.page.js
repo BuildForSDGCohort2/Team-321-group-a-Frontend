@@ -40,7 +40,7 @@ const SignUp = (props) => {
   return (
     <div>
       <HeaderComponent />
-      <Grid padded stacked centered>
+      <Grid padded stacked textAlign="center">
         <Grid.Column mobile={16} tablet={8} computer={5}>
           <Header as="h2">Create a Secure Account</Header>
           <label>Welcome to the future of Wealth & Health </label>

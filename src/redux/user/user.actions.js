@@ -14,7 +14,7 @@ export const signInStart = () => ({
 export const signInSuccess = ({username, password, history}) => dispatch => {
   dispatch(signInStart());
   axios
-    .post('/login',{username, password}, setAuthToken(token))
+    .post('/accounts/login',{username, password}, setAuthToken(token))
     .then(response => {
       dispatch({
         type: UserActionTypes.SIGN_IN_SUCCESS,
@@ -23,9 +23,11 @@ export const signInSuccess = ({username, password, history}) => dispatch => {
 
       store.set("token", response.data.token);
       history.push("dashboard/"+response.data.user.user_type);
+      console.log(response)
     })
     .catch(err => {
       dispatch(signInFailure(err.response.data.detail));
+      console.log(err.response)
     })
 };
 
@@ -53,7 +55,7 @@ export const signUpFailure = (error) => ({
 });
 
 export const signUpSuccess = ({history, props})  => dispatch => {
-  const url = "https://cors-anywhere.herokuapp.com/https://docbook-backend.herokuapp.com/register";
+  const url = "https://docbook-backend.herokuapp.com/register";
   dispatch(signUpStart())
   axios.post(url, props)
   .then((response) => {

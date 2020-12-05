@@ -20,7 +20,7 @@ import axios from "axios";
 //   export default setAuthToken;
 //   export { mainAxios, profileAxios };
 
-axios.defaults.baseURL = "https://cors-anywhere.herokuapp.com/https://docbook-backend.herokuapp.com";
+axios.defaults.baseURL = "https://docbook-backend.herokuapp.com";
 
 const setAuthToken = (token) => {
   if (token) {

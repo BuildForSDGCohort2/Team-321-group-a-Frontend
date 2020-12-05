@@ -1,7 +1,7 @@
 import UserActionTypes from "./user.types";
 
 const INITIAL_STATE = {
-  currentUser: null,
+  currentUser: {username:'uche', user_type: 'patient' },
   error: null,
   isLoading: false,
 };
@@ -36,10 +36,17 @@ const userReducer = (state = INITIAL_STATE, action) => {
         error: action.payload,
         isLoading: false
       };
+
+    case UserActionTypes.UPDATE_PROFILE:
+      return {
+        ...state,
+        currentUser: action.payload
+      };
+    
     case UserActionTypes.SET_CURRENT_USER:
       return {
         ...state,
-        accountType: action.payload,
+        currentUser: action.payload,
       };
     default:
       return state;
